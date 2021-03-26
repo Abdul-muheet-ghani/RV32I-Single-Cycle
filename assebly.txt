@@ -1,0 +1,29 @@
+addi x2,x0,2
+addi x3,x0,3
+add x4,x2,x3
+sub x4,x3,x2
+auipc x13,1
+lui x14,1
+and x5,x2,x3
+andi x5,x2,1
+or x6,x2,x3
+ori x6,x2,1
+xor x7,x2,x3
+xori x7,x2,1
+sll x8,x2,x3
+slli x8,x2,1
+srl x9,x2,x3
+jal up
+up:
+  beq x5,x6,label
+  srli x9,x2,1
+  slt x10,x2,x3
+  slti x10,x2,1
+sltu x11,x2,x3
+label:
+sltiu x11,x2,1
+sra x12,x2,x3
+srai x12,x2,1
+jalr x2,x0,0x64
+sw x4,0x0(x4)
+lw x4,0x0(x4)
