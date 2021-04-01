@@ -24,6 +24,14 @@ This repository contains RISC-V Single Cycle 32 Bit Processor simulation on Logi
 - [Zeeshan Raffique](https://github.com/zeeshanrafique23 "sir zeeshan profile")
 - [Sajjad Ahmed](https://github.com/sajjadahmed677 "sie ajjad profile")
 
+## Pre-Req Tools
+- Logisim Software [Logisim](http://www.cburch.com/logisim/download.html "website")
+- Reference book for help [David_A._Patterson,_John_L._Hennessy](https://drive.google.com/file/d/1zJ5JT1A-pmruRShfD6ikY52tFlcvrdYB/view "book")
+- Venus online simulator [Venus](https://venus.cs61c.org/ "online simulator")
+
+## Designing procedure
+
+At first learn the basic instructions of the RV32I Instruction Set Architecture and learn their functionality. To learn the backend working use Venus Online RV32I Simulator. This Simulator helps grasp the working behind the instruction much faster. On the Logic Simulator software first start with the program counter and memory address register. Then develop the circuit for the immediate generation which uses full instruction and PC to generate respective immediate. after that create register file with 32 registers each 32-bit data width. This register file takes 5-bit address to select one of the 32 registers and write data to it using register enable wire. two 5-bit address RS1 and RS2 are to read one of the 32 registers simultaneously. Now make 32 Bit ALU with 4-bit ALU operation Select which selects which operation to perform according to the instruction. After completing create type decoder which uses 7-bit opcode to decode the type of the instruction. Then in control Decoder depending upon the type of instruction, function3 and function7 different components are controlled. Integrate type decode and control decode, and this will become your control unit. Add RAM and configure its data bits to 32bit and address width to 12 bits. To handle branch instruction Branch circuit is now having to be created using the simple comparators and depending upon the RS1 and RS2 conditional jump is done if branch is true. In the end Add a 32-bit adder for jalr as this instruction requires two additions. One ALU cannot perform 2 operation on a single cycle. Connect the wiring using the splitters, multiplexers, constants, tunnels, and clocks. To troubleshoot the circuit, start with the simpler instructions e.g.; add, addi and watch the circuit behavior using temporary register outputs. To load the machine code on the Instruction Register, simulate the code on Venus then using dump feature copy the machine code and create xyzcode.mem extension file using All file saving option on notepad :
 
 ### Create a .txt file and place the hexadecimal code of your instructions simulated on Venus (RISC-V Simulator)
 Each instruction's hexadecimal code must be on seperate line as following. This program consists of 27 instruction
