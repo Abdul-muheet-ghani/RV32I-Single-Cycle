@@ -1,6 +1,29 @@
 # RV32I Single Cycle
-## Design By **_`Abdul Muheet Ghani`_**
 ![single cycle](https://user-images.githubusercontent.com/81433387/112760956-4b2d4080-9012-11eb-8a8a-48a488396f03.PNG)
+
+## Description
+This repository contains RISC-V Single Cycle 32 Bit Processor simulation on Logic Simulator called [Logisim](http://www.cburch.com/logisim/download.html "website"). This circuit contains 32 bit ALU, 32 bit Data Bus, 16KB ROM/RAM, 12 Bit Address Bus for both RAM MAR(memory address register). Register File contains 32 Registers with data width of 32 bits. Troubleshooting codes used to verify all the circuit components.
+
+## Component
+- ALU
+- Register File
+- Memory Address Register
+- Immediate Generation
+- Control Unit
+  - Type Decode
+  - Control Decode
+- RAM
+- Branch Circuit
+- Program Counter
+
+## Refrence Material 
+- Book [David_A._Patterson,_John_L._Hennessy](https://drive.google.com/file/d/1zJ5JT1A-pmruRShfD6ikY52tFlcvrdYB/view "book")
+- Online RV32I Simulator [Venus](https://venus.cs61c.org/ "online simulator")
+
+## Under the Guidance
+- [Zeeshan Raffique](https://github.com/zeeshanrafique23 "sir zeeshan profile")
+- [Sajjad Ahmed](https://github.com/sajjadahmed677 "sie ajjad profile")
+
 
 ### Create a .txt file and place the hexadecimal code of your instructions simulated on Venus (RISC-V Simulator)
 Each instruction's hexadecimal code must be on seperate line as following. This program consists of 27 instruction
