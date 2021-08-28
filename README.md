@@ -100,6 +100,10 @@ lw x4,0x0(x4)
 ```
 #### Save the Dump code in `all files` formate and load image in Instruction Memory
 
+# 5 Stage pipelining
+x-special/nautilus-clipboard
+copy
+file:///home/muheet-ghani/Pictures/5%20Stage%20pipelinig%20on%20logisim 
 ---
 >keep smiling and work harder
 ***
