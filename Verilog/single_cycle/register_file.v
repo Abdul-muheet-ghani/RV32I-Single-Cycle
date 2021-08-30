@@ -14,5 +14,5 @@ module reg_file (
    assign op_rs1=reg_mem[rs1];
    assign op_rs2=reg_mem[rs2];
 endmodule
-//----------------------------------------
+
 
