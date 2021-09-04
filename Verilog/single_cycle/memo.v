@@ -1,10 +1,3 @@
-/*
-Author Abdul Muheet Ghani
-Single Cycle RISC-V RV32I
-processor are in process of troubleshooting
-
-*/
-
 
 //=---------------------------=
 
@@ -104,7 +97,7 @@ module unit (
       1000 : un[10:9] = 2'b10;
       default: un[10:9] = 0;
    endcase
-   un[8] = dec[0] | dec[1] | dec[4] | dec[5] | dec[7]  ;
+   un[8] = dec[0] | dec[1] | dec[4] | dec[5] | dec[7] | dec[6] ;
    case (b)
       3'b001 : un[7:6] = 2'b11;
       3'b010 : un[7:6] = 2'b01;
@@ -372,6 +365,7 @@ module immediate (
     I[31:12] = 20'b00000000000000000000;
     S[4:0] = instruction[11:7] ;
     S[11:5] = instruction[31:25];
+    S[31:12] = 20'b00000000000000000000;
     SB = pc + az;
     UJ = pc + ay;
     U = ax<<12;
@@ -530,7 +524,7 @@ module as (
  input clk;
  input [31:0]data_in ;
  output [14:0]data_out ;
- wire [31:0]OUT_T,addr,a,b,I,S,SB,UJ,U,op1,op2,faltu,reg_1,reg_2,im,ALU_OUTPUT,write_adder,write_ba ;
+ wire [31:0]OUT_T,addr,a,b,I,S,SB,UJ,U,op1,op2,faltu,reg_1,reg_2,im,ALU_OUTPUT,write_adder,write_ba,rite_ba ;
  wire [8:0]c ;
  wire [4:0]r1,r2,rf ;
  reg [31:0]ac,addr1=0 ;
@@ -560,14 +554,15 @@ module as (
  end
 
  reg_adr ms(b,r1,r2,rf,clk);
- reg_file m4(r1,r2,rf,write_ba,op1,op2,clk);
+ reg_file m4(r1,r2,rf,rite_ba,op1,op2,clk);
  immediate m5(b,a,I,S,SB,UJ,U);
  mux2_4 m6(opa,op1,a,OUT_T,zero,reg_1);
- mux2_4 m7(imm_sel,zero,U,I,SB,im);
+ mux2_4 m7(imm_sel,zero,U,I,S,im);
  mux1_2 m8(opb,op2,im,reg_2);
  ALU m9(alu_op,reg_1,reg_2,ALU_OUTPUT);
  data_mem m10(clk,ALU_OUTPUT,reg_2,mem_write,mem_to_reg,write_adder);
  mux1_2 m11(mem_to_reg,ALU_OUTPUT,write_adder,write_ba);
+ mux1_2 m14(mem_write,write_ba,zero,rite_ba);
  mux1_2 m13(branch,a,SB,OUT_T);
 endmodule
 //--------------------------------------------------
