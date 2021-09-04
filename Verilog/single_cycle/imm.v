@@ -28,6 +28,7 @@ module immediate (
     I[31:12] = 20'b00000000000000000000;
     S[4:0] = instruction[11:7] ;
     S[11:5] = instruction[31:25];
+    S[31:12] = 20'b00000000000000000000;
     SB = pc + az;
     UJ = pc + ay;
     U = ax<<12;
