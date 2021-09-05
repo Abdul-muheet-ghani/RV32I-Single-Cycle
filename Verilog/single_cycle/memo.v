@@ -465,7 +465,7 @@ module data_mem (
  input clk,str,ld;
  input [31:0]addr,d;
  output reg[31:0] resu;
- reg [31:0] data_rom[2^32-1:0];
+ reg [31:0] data_rom[1024-1:0];
 
  always @(*) begin
     if (str == 1) begin
@@ -560,7 +560,7 @@ module as (
  mux2_4 m7(imm_sel,zero,U,I,S,im);
  mux1_2 m8(opb,op2,im,reg_2);
  ALU m9(alu_op,reg_1,reg_2,ALU_OUTPUT);
- data_mem m10(clk,ALU_OUTPUT,reg_2,mem_write,mem_to_reg,write_adder);
+ data_mem m10(clk,ALU_OUTPUT,op2,mem_write,mem_to_reg,write_adder);
  mux1_2 m11(mem_to_reg,ALU_OUTPUT,write_adder,write_ba);
  mux1_2 m14(mem_write,write_ba,zero,rite_ba);
  mux1_2 m13(branch,a,SB,OUT_T);
