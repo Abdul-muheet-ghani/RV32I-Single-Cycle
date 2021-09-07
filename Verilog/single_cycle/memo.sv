@@ -1,21 +1,21 @@
-
-//=---------------------------=
-
 module ram (
-    clk,addr,data_in,data_out
- );
+    clk,addre,din,dout
+);
+    input clk;
+    input [31:0]din;
+    input [31:0]addre;
+    output reg [31:0]dout ;
 
- input clk;
- input [31:0]addr,data_in;
- output wire[31:0] data_out;
- reg [31:0] mem[1024-1:0];
+    reg [31:0] mem[1024-1:0] ;
 
-
-   always @* begin
-     mem[addr]=data_in;
-   end
-  assign data_out=mem[addr];
+    initial begin
+        $readmemh("coef.txt",mem);
+    end
     
+    always @(posedge clk) begin
+            mem[addre] <= din;
+            dout <= mem[addre];
+    end
 endmodule
 //----------------------------------------------------
 module adder (clk,a);
@@ -343,6 +343,7 @@ module immediate (
  wire [31:0]az,ay,ax ;
 
 
+
    assign az[0] = 1'b0;
    assign az[4:1] = instruction[11:8];
    assign az[10:5] = instruction[30:25];
@@ -355,12 +356,13 @@ module immediate (
    assign ay[11] = instruction[20];
    assign ay[19:12] = instruction[19:12];
    assign ay[20] = instruction[31];
-   assign ay[31:21] = 10'b0000000000;
+
+   assign ay[31:21] = 12'b000000000000;
 
    assign ax[19:0] = instruction[31:12];
    assign ax[31:20] = 0;
 
- always @* begin
+ always @(*)  begin
     I[11:0] = instruction[31:20] ;
     I[31:12] = 20'b00000000000000000000;
     S[4:0] = instruction[11:7] ;
