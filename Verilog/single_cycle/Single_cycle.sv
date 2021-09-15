@@ -1,3 +1,7 @@
+/*
+Abdul Muheet Ghani
+*/
+
 `timescale 1ns/1ns
 module ram (
     clk,addre,din,dout,we
