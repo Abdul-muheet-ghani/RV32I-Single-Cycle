@@ -24,11 +24,7 @@ module ram (
     end
     
     always @(posedge clk) begin
-            if (we==1) begin
-               mem[add1] <= din;
-            end else begin
-               dout <= mem[add1];
-            end
+        dout <= mem[add];
     end
 endmodule
 //----------------------------------------------------
