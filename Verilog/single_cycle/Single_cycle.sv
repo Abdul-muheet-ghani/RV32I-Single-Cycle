@@ -18,12 +18,12 @@ module ram (
         $readmemh("coef.mem",mem);
     end
     
-    always @(posedge clk) begin
+    always @(*) begin
        if (we==1) begin
-          mem[add1]<=din;
+          mem[add1]=din;
        end 
        else begin
-          dout <= mem[add1];
+          dout = mem[add1];
        end
          
     end
@@ -34,11 +34,14 @@ module adder (clk,adr,a);
 
  reg [31:0]c=0;
  input [31:0]adr;
- output wire [31:0]a;
+ output reg [31:0]a;
  input clk;
 
- assign a = adr + 4;
-
+  
+  
+  always @(*) begin
+     a = adr + 4;
+  end
     
 endmodule
 //-----------------------------------------------------
@@ -105,7 +108,7 @@ module unit (
       1000 : un[10:9] = 2'b10;
       default: un[10:9] = 0;
    endcase
-   un[8] = dec[0] | dec[1] | dec[4] | dec[5] | dec[7] | dec[6] ;
+   un[8] = dec[0] | dec[1] | dec[4] | dec[5] | dec[7] | dec[6] | dec[2];
    case (b)
       3'b001 : un[7:6] = 2'b11;
       3'b010 : un[7:6] = 2'b01;
@@ -478,7 +481,7 @@ module as (
  adder adder(clk,adr,a);
  mux2_4 mux2_4(next_pc,a,UJ,OUT_T,I + reg_1,addr);
  reg_is reg_is(addr,adr,clk,reset);
- ram ram(clk,addr,data_in,b,we);
+ ram ram(clk,adr,data_in,b,we);
  control control(b,c);
  unit unit(c,b,data_out);
  reg reg_write,mem_to_reg,mem_write,branch,opb;
