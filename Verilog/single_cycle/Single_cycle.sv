@@ -108,7 +108,7 @@ module unit (
       1000 : un[10:9] = 2'b10;
       default: un[10:9] = 0;
    endcase
-   un[8] = dec[0] | dec[1] | dec[4] | dec[5] | dec[7] | dec[6] | dec[2];
+   un[8] = dec[0] | dec[1] | dec[5] | dec[7] | dec[6] | dec[2];
    case (b)
       3'b001 : un[7:6] = 2'b11;
       3'b010 : un[7:6] = 2'b01;
@@ -333,6 +333,7 @@ module branch (
  wire fu_3;
 
  always @* begin
+    if(en==1)begin
    if (fu_3 == 3'b000) begin
    if (op1 == op2) begin
       re = 1;
@@ -376,7 +377,7 @@ module branch (
    end
  end
 
-
+    end
  end
    
 endmodule
@@ -467,24 +468,25 @@ module as (
     clk,data_in,data_out,we,reset
  );
 
- input logic clk,we,reset;
+ input logic clk,we,reset,branch_p;
  input [31:0]data_in ;
  output [14:0]data_out ;
  wire [31:0]OUT_T,addr,adr,a,b,I,S,SB,UJ,U,op1,op2,faltu,reg_1,reg_2,im,ALU_OUTPUT,write_adder,write_ba,rite_ba ;
  wire [8:0]c ;
  wire [4:0]r1,r2,rf ;
+ reg [2:0]fun_3 ;
  reg [31:0]ac,addr1=0 ;
  reg [1:0]opa,next_pc=0,imm_sel ;
 
  //output [31:0]op1,op2;
-
+ 
  adder adder(clk,adr,a);
  mux2_4 mux2_4(next_pc,a,UJ,OUT_T,I + reg_1,addr);
  reg_is reg_is(addr,adr,clk,reset);
  ram ram(clk,adr,data_in,b,we);
  control control(b,c);
  unit unit(c,b,data_out);
- reg reg_write,mem_to_reg,mem_write,branch,opb;
+ reg reg_write,mem_to_reg,mem_write,branch1,opb;
  reg [3:0]alu_op;
  wire [31:0]zero = 0 ;
 
@@ -494,10 +496,11 @@ module as (
     next_pc = data_out[7:6];
     opb = data_out[8];
     opa = data_out[10:9];
-    branch = data_out[11];
+    branch1 = data_out[11];
     mem_write = data_out[12];
     mem_to_reg = data_out[13];
     reg_write = data_out[14];
+    fun_3 = b[14:12];
  end
  reg_adr reg_adr(b,r1,r2,rf,clk);
  reg_file reg_file(r1,r2,rf,rite_ba,op1,op2,clk,reset);
@@ -506,10 +509,11 @@ module as (
  mux2_4 mux2_42(imm_sel,zero,U,I,S,im);
  mux1_2 mux1_20(opb,op2,im,reg_2);
  ALU ALU(alu_op,reg_1,reg_2,ALU_OUTPUT);
+ branch branch(reg_1,reg_2,fun_3,branch1,branch_p);
  data_mem data_mem(clk,ALU_OUTPUT,op2,mem_write,mem_to_reg,write_adder);
  mux1_2 mux1_21(mem_to_reg,ALU_OUTPUT,write_adder,write_ba);
  mux1_2 mux1_22(mem_write,write_ba,zero,rite_ba);
- mux1_2 mux1_23(branch,a,SB,OUT_T);
+ mux1_2 mux1_23(branch_p,a,SB,OUT_T);
 endmodule
 //--------------------------------------------------
 /*
