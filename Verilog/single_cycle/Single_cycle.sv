@@ -228,12 +228,13 @@ module reg_file (
 endmodule
 //----------------------------------------------------
 module immediate (
-   instruction,pc,II,S,SB,UJ,U
+   instruction,pc,I,S,SB,UJ,U
  );
  input signed [31:0]instruction,pc;
- output reg signed [31:0]S,SB,UJ,U,II ;
- reg [11:0]I ;
- reg signed [31:0]az,ay,ax ;
+ output reg signed [31:0]S,SB,UJ,U,I ;
+ reg [11:0]II ,SS ,az;
+ reg [19:0]ay;
+ reg signed [31:0]ax ;
 
    always @(*) begin 
    az[0] = 1'b0;
@@ -241,13 +242,6 @@ module immediate (
    az[10:5] = instruction[30:25];
    az[11] = instruction[7];
    az[12] = instruction[31];
-   if (instruction[31]==1) begin
-      az[31:13] = 20'b11111111111111111111;
-      ay[31:21] = 12'b111111111111;
-   end else begin
-      az[31:13] = 20'b00000000000000000000;
-      ay[31:21] = 12'b000000000000;
-   end
 
    ay[0] = 1'b0;
    ay[10:1] = instruction[30:21];
@@ -258,18 +252,14 @@ module immediate (
    ax[19:0] = instruction[31:12];
    ax[31:20] = 0;
 
-   I = instruction[31:20] ;
-   II = {{20{I[11]}},I};
-   if (instruction[31]==1) begin
-      S[31:12] = 20'b11111111111111111111;
-   end else begin
-      S[31:12] = 20'b00000000000000000000;
-   end
-   S[4:0] = instruction[11:7] ;
-   S[11:5] = instruction[31:25];
-   SB = pc + az;
-   UJ = pc + ay;
-   U = ax<<12;
+   II = instruction[31:20];
+   I = {{20{II[11]}},II};
+   SS[4:0] = instruction[11:7] ;
+   SS[11:5] = instruction[31:25];
+   S = {{20{SS[11]}},SS};
+   SB = pc + {{19{az[12]}},az};
+   UJ = pc + {{11{ay[20]}},ay};
+   U = ax << 12;
    end
 endmodule
 //----------------------------------------------------
