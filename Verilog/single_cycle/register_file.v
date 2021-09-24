@@ -1,18 +1,26 @@
 module reg_file (
-   clk,rs1,rs2,rd,write_back,op_rs1,op_rs2,wr
+   rs1,rs2,rd,inp,ou1,ou2,clk,reset
  );
 
- input clk,wr;
- input [31:0]write_back;
+ input clk,reset;
  input [4:0]rs1,rs2,rd;
- output wire[31:0]op_rs1,op_rs2;
- reg [31:0] reg_mem[32-1:0];
+ input [31:0]inp;
+ output wire [31:0]ou1,ou2;
+ integer i;
+ 
+ reg [31:0] reg_file1[31:0];
 
- always @(*) begin
-    reg_mem[rd]<=write_back;
+ always @(posedge clk ) begin
+    if (reset == 1) begin
+      for (i = 0 ; i<=31 ; i++) begin
+         reg_file1[i]=0;
+      end 
+    end else begin
+      reg_file1[rd] = inp;
+    end
+    
  end
-   assign op_rs1=reg_mem[rs1];
-   assign op_rs2=reg_mem[rs2];
+    assign ou1 = (rs1 != 0) ? reg_file1[rs1] : 0;
+    assign ou2 = (rs2 != 0) ? reg_file1[rs2] : 0;
+
 endmodule
-
-
