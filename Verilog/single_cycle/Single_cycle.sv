@@ -1,18 +1,15 @@
 `timescale 1ns/1ns
-module ram (
+module ram #(
+   parameter address = 12, size = 32
+) (
     clk,addre,din,dout,we
  );
     input clk,we;
     input [31:0]din;
-    input [31:0]addre;
+    input [11:0]addre;
     output reg [31:0]dout ;
-    reg [11:0]add1 ;
 
-    always @(*) begin
-       add1 = addre[13:2];
-    end
-
-    reg [31:0] mem[1024-1:0] ;
+    reg [31:0] mem[2**address-1:0] ;
 
     initial begin
         $readmemh("coef.mem",mem);
@@ -20,10 +17,10 @@ module ram (
     
     always @(*) begin
        if (we==1) begin
-          mem[add1]=din;
+          mem[addre]=din;
        end 
        else begin
-          dout = mem[add1];
+          dout = mem[addre];
        end
          
     end
@@ -54,7 +51,6 @@ module control (
  always @* begin
     c = opcode[6:0];
  end
-
 
  always @* begin
    case (c)
@@ -204,22 +200,6 @@ module unit (
 
 endmodule
 //----------------------------------------------------
-module reg_adr (
-   bit,rs1,rs2,rd,clk
- );
-
-    input [31:0]bit;
-    output reg [4:0]rs1,rs2,rd ;
-    input clk;
-
-    always @(*) begin
-        rs2 <= bit[24:20];
-        rs1 <= bit[19:15];
-        rd  <= bit[11:7];
-    end
-   
-endmodule
-//----------------------------------------------------
 module reg_file (
    rs1,rs2,rd,inp,ou1,ou2,clk,reset
  );
@@ -227,10 +207,10 @@ module reg_file (
  input clk,reset;
  input [4:0]rs1,rs2,rd;
  input [31:0]inp;
- output reg[31:0]ou1,ou2;
+ output wire [31:0]ou1,ou2;
  integer i;
  
- reg [31:0]  reg_file1[31:0];
+ reg [31:0] reg_file1[31:0];
 
  always @(posedge clk ) begin
     if (reset == 1) begin
@@ -240,19 +220,10 @@ module reg_file (
     end else begin
       reg_file1[rd] = inp;
     end
+    
  end
- always @(*) begin
-      if (rs1==0) begin
-         ou1=0;
-      end else begin
-         ou1 = reg_file1[rs1];
-      end 
-      if (rs2==0) begin
-         ou2=0;
-      end else begin
-         ou2 = reg_file1[rs2];
-      end
-    end
+    assign ou1 = (rs1 != 0) ? reg_file1[rs1] : 0;
+    assign ou2 = (rs2 != 0) ? reg_file1[rs2] : 0;
 
 endmodule
 //----------------------------------------------------
@@ -453,7 +424,7 @@ module mux2_4 (
    
 endmodule
 
-module reg_is (
+module PC (
    in,out,clk,we
 );
 
@@ -481,6 +452,7 @@ module as (
  wire [31:0]OUT_T,addr,adr,a,b,I,S,SB,UJ,U,op1,op2,faltu,reg_1,reg_2,im,ALU_OUTPUT,write_adder,write_ba,rite_ba ;
  wire [8:0]c ;
  wire [4:0]r1,r2,rf ;
+ wire [11:0]after_PC ;
  reg [2:0]fun_3 ;
  reg [31:0]ac,addr1=0 ;
  reg [1:0]opa,next_pc=0,imm_sel ;
@@ -489,8 +461,9 @@ module as (
  
  adder adder(clk,adr,a);
  mux2_4 mux2_4(next_pc,a,UJ,OUT_T,I + reg_1,addr);
- reg_is reg_is(addr,adr,clk,reset);
- ram ram(clk,adr,data_in,b,we);
+ PC PC(addr,adr,clk,reset);
+ assign after_PC[11:0] = adr[13:2];
+ ram ram(clk,after_PC,data_in,b,we);
  control control(b,c);
  unit unit(c,b,data_out);
  reg reg_write,mem_to_reg,mem_write,branch1,opb;
@@ -509,7 +482,9 @@ module as (
     reg_write = data_out[14];
     fun_3 = b[14:12];
  end
- reg_adr reg_adr(b,r1,r2,rf,clk);
+ assign r1 = b[19:15];
+ assign r2 = b[24:20];
+ assign rf = b[11:7];
  reg_file reg_file(r1,r2,rf,rite_ba,op1,op2,clk,reset);
  immediate immediate(b,adr,I,S,SB,UJ,U);
  mux2_4 mux2_40(opa,op1,a,OUT_T,zero,reg_1);
@@ -523,16 +498,3 @@ module as (
  mux1_2 mux1_23(branch_p,a,SB,OUT_T);
 endmodule
 //--------------------------------------------------
-/*
-module asd (
-   clk,data_in,data_out,we
-);
-   input clk,we;
-   input [31:0]data_in;
-   output [31:0]data_out;
-   wire [31:0]a ;
-
-   adder m89(clk,a);
-   ram m78(clk,a,data_in,data_out,we);
-
-endmodule*/
