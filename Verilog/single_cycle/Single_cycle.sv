@@ -228,10 +228,11 @@ module reg_file (
 endmodule
 //----------------------------------------------------
 module immediate (
-   instruction,pc,I,S,SB,UJ,U
+   instruction,pc,II,S,SB,UJ,U
  );
  input signed [31:0]instruction,pc;
- output reg signed [31:0]S,SB,UJ,U,I ;
+ output reg signed [31:0]S,SB,UJ,U,II ;
+ reg [11:0]I ;
  reg signed [31:0]az,ay,ax ;
 
    always @(*) begin 
@@ -257,12 +258,11 @@ module immediate (
    ax[19:0] = instruction[31:12];
    ax[31:20] = 0;
 
-   I[11:0] = instruction[31:20] ;
+   I = instruction[31:20] ;
+   II = {{20{I[11]}},I};
    if (instruction[31]==1) begin
-      I[31:12] = 20'b11111111111111111111;
       S[31:12] = 20'b11111111111111111111;
    end else begin
-      I[31:12] = 20'b00000000000000000000;
       S[31:12] = 20'b00000000000000000000;
    end
    S[4:0] = instruction[11:7] ;
