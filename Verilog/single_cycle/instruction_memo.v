@@ -1,16 +1,26 @@
-module ram (
-    clk,addr,data_in,data_out
+module ram #(
+   parameter address = 12, size = 32
+ ) (
+    clk,addre,din,dout,we
  );
+    input clk,we;
+    input [31:0]din;
+    input [11:0]addre;
+    output reg [31:0]dout ;
 
- input clk;
- input [31:0]addr,data_in;
- output wire[31:0] data_out;
- reg [31:0] mem[1024-1:0];
+    reg [31:0] mem[2**address-1:0] ;
 
-
-   always @* begin
-     mem[addr]=data_in;
-   end
-  assign data_out=mem[addr];
+    initial begin
+        $readmemh("coef.mem",mem);
+    end
     
+    always @(*) begin
+       if (we==1) begin
+          mem[addre]=din;
+       end 
+       else begin
+          dout = mem[addre];
+       end
+         
+    end
 endmodule
