@@ -1,7 +1,27 @@
 `timescale 1ns/1ns
+
+module byte_acces (
+   byte_address,Byte_access,word
+ );
+
+ input [1:0]byte_address;
+ input [31:0]word;
+ output reg [7:0]Byte_access;
+
+ always @(*) begin
+   case (byte_address)
+      2'b00 :  Byte_access = word[7:0];
+      2'b01 :  Byte_access = word[15:8];
+      2'b10 :  Byte_access = word[23:16];
+      2'b11 :  Byte_access = word[31:24];
+   endcase
+ end
+   
+endmodule
+//---------------------------------------------
 module ram #(
    parameter address = 12, size = 32
-) (
+ ) (
     clk,addre,din,dout,we
  );
     input clk,we;
@@ -268,7 +288,7 @@ module ALU (
  );
    input [3:0]op;
    input [31:0]op1,op2;
-   output reg [31:0]res ;
+   output reg signed [31:0]res ;
 
 
  always @* begin
@@ -279,11 +299,11 @@ module ALU (
          4'b0011 : res = op1 | op2;
          4'b0100 : res = op1 ^ op2;
          4'b0101 : res = op1 << op2;
-         4'b0101 : res = op1 >> op2;
-         4'b0110 : res = op1 > op2;
-         4'b0111 : res = op1 > op2;
-         4'b1000 : res = op1 >> op2;
-         4'b1111 : res = op1 + op2;
+         4'b0110 : res = op1 >> op2;
+         4'b0111 : res[0] = (op1 < op2) ? 1 : 0;
+         4'b1000 : res[0] = (op1 < op2) ? 1 : 0;
+         4'b1001 : res = op1 >>> op2;
+         4'b1111 : res = op1 ;
          default: res = 0;
       endcase
  end
@@ -413,7 +433,7 @@ module mux2_4 (
  end
    
 endmodule
-
+//--------------------------------------------------
 module PC (
    in,out,clk,we
 );
@@ -428,8 +448,7 @@ module PC (
    end else begin
       out <= in;
    end
-end
-   
+end   
 endmodule
 //---------------------------------------------------
 module as (
