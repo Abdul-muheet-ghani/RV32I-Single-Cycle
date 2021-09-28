@@ -455,12 +455,14 @@ module as (
     clk,data_in,data_out,we,reset
  );
 
- input logic clk,we,reset,branch_p;
+ input clk,we,reset,branch_p;
  input [31:0]data_in ;
  output [14:0]data_out ;
- wire [31:0]OUT_T,addr,adr,a,b,I,S,SB,UJ,U,op1,op2,faltu,reg_1,reg_2,im,ALU_OUTPUT,write_adder,write_ba,rite_ba ;
+ wire [31:0]OUT_T,addr,adr,a,b,I,S,SB,UJ,U,op1,op2,faltu,reg_1,reg_2,im,ALU_OUTPUT,write_adder,write_ba,rite_ba,rb1 ;
  wire [8:0]c ;
  wire [4:0]r1,r2,rf ;
+ reg [4:0]re;
+ reg [31:0]wb ;
  wire [11:0]after_PC ;
  reg [2:0]fun_3 ;
  reg [31:0]ac,addr1=0 ;
@@ -475,7 +477,7 @@ module as (
  ram ram(clk,after_PC,data_in,b,we);
  control control(b,c);
  unit unit(c,b,data_out);
- reg reg_write,mem_to_reg,mem_write,branch1,opb;
+ reg reg_write,mem_to_reg,mem_write,branch1,opb,j;
  reg [3:0]alu_op;
  wire [31:0]zero = 0 ;
 
@@ -490,11 +492,20 @@ module as (
     mem_to_reg = data_out[13];
     reg_write = data_out[14];
     fun_3 = b[14:12];
+    j = c[3];
+    if (j == 1) begin
+       re = 5'b00001;
+       wb = after_PC + 4;
+    end else begin
+       re = b[11:7];
+       wb = rite_ba;
+    end
  end
  assign r1 = b[19:15];
  assign r2 = b[24:20];
- assign rf = b[11:7];
- reg_file reg_file(r1,r2,rf,rite_ba,op1,op2,clk,reset);
+ assign rf = re;
+
+ reg_file reg_file(r1,r2,rf,wb,op1,op2,clk,reset);
  immediate immediate(b,adr,I,S,SB,UJ,U);
  mux2_4 mux2_40(opa,op1,a,OUT_T,zero,reg_1);
  mux2_4 mux2_42(imm_sel,zero,U,I,S,im);
