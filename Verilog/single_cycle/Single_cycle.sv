@@ -251,9 +251,9 @@ module immediate (
    instruction,pc,I,S,SB,UJ,U
  );
  input signed [31:0]instruction,pc;
- output reg signed [31:0]S,SB,UJ,U,I ;
+ output reg signed [31:0]S,SB,UJ,U,I,k ;
  reg [11:0]II ,SS ,az;
- reg [19:0]ay;
+ reg [20:0]ay;
  reg signed [31:0]ax ;
 
    always @(*) begin 
@@ -278,7 +278,8 @@ module immediate (
    SS[11:5] = instruction[31:25];
    S = {{20{SS[11]}},SS};
    SB = pc + {{19{az[12]}},az};
-   UJ = pc + {{11{ay[20]}},ay};
+   k = {{0{ay[21]}},ay};
+   UJ = k + pc;
    U = ax << 12;
    end
 endmodule
@@ -495,7 +496,7 @@ module as (
     j = c[3];
     if (j == 1) begin
        re = 5'b00001;
-       wb = after_PC + 4;
+       wb = adr + 4;
     end else begin
        re = b[11:7];
        wb = rite_ba;
