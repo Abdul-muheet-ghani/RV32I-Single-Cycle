@@ -303,7 +303,7 @@ module ALU (
          4'b0101 : res = op1 << op2;
          4'b0110 : res = op1 >> op2;
          4'b0111 : res[0] = (op1 < op2) ? 1 : 0;
-         4'b1000 : res[0] = (op1 < op2) ? 1 : 0;
+         4'b1000 : res[0] = ($signed (op1) < $signed (op2)) ? 1 : 0;
          4'b1001 : res = op1 >>> op2;
          4'b1111 : res = op1 ;
          default: res = 0;
@@ -378,25 +378,19 @@ module data_mem (
 
  input clk,str,ld;
  input [31:0]addr,d;
- output reg[31:0] resu;
+ output logic [31:0] resu;
  reg [11:0]ad1 ;
- reg [31:0] data_rom[1024-1:0];
-
- always @(*) begin
-    ad1 = addr[13:2];
- end
-
- always @(*) begin
-    if (str == 1) begin
+ logic [31:0] data_rom[1024-1:0];
+   
+ always @(clk) begin
+    if (str) begin
        data_rom[addr] <= d;
     end
-    if (ld == 1) begin
+    if (ld) begin
       resu = data_rom[addr];
    end
  end
- 
 
-    
 endmodule
 //----------------------------------------------------
 module mux1_2 (
