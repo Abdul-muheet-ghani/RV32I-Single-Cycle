@@ -16,7 +16,7 @@ module ALU (
          4'b0101 : res = op1 << op2;
          4'b0110 : res = op1 >> op2;
          4'b0111 : res[0] = (op1 < op2) ? 1 : 0;
-         4'b1000 : res[0] = (op1 < op2) ? 1 : 0;
+         4'b1000 : res[0] = ($signed (op1) < $signed (op2)) ? 1 : 0;
          4'b1001 : res = op1 >>> op2;
          4'b1111 : res = op1 ;
          default: res = 0;
