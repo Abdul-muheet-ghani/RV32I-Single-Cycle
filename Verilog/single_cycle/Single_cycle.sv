@@ -327,8 +327,8 @@ module branch (
        case (fu_3)
           3'b000 : re = (op1 == op2) ? 1 : 0 ;
           3'b001 : re = (op1 != op2) ? 1 : 0 ;
-          3'b100 : re = (op1 < op2) ? 1 : 0 ;
-          3'b101 : re = (op1 >= op2) ? 1 : 0 ;
+          3'b100 : re = ($signed (op1) < $signed (op2)) ? 1 : 0 ;
+          3'b101 : re = ($signed (op1) >= $signed (op2)) ? 1 : 0 ;
           3'b110 : re = (op1 < op2) ? 1 : 0 ;
           3'b111 : re = (op1 >= op2) ? 1 : 0 ;
        endcase
