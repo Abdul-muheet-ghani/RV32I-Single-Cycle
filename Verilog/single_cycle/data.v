@@ -4,18 +4,17 @@ module data_mem (
 
  input clk,str,ld;
  input [31:0]addr,d;
- output reg[31:0] resu;
- reg [31:0] data_rom[2^32-1:0];
-
- always @(*) begin
-    if (str == 1) begin
+ output logic [31:0] resu;
+ reg [11:0]ad1 ;
+ logic [31:0] data_rom[1024-1:0];
+   
+ always @(clk) begin
+    if (str) begin
        data_rom[addr] <= d;
     end
-    if (ld == 1) begin
+    if (ld) begin
       resu = data_rom[addr];
    end
  end
- 
 
-    
 endmodule
