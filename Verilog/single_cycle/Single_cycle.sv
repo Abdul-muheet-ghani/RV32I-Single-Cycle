@@ -324,49 +324,14 @@ module branch (
 
  always @* begin
     if(en==1)begin
-   if (fu_3 == 3'b000) begin
-   if (op1 == op2) begin
-      re = 1;
-   end else begin
-      re = 0;
-   end
- end
-   if (fu_3 == 3'b001) begin
-   if (op1 != op2) begin
-      re = 1;
-   end else begin
-      re = 0;
-   end
- end
-   if (fu_3 == 3'b100) begin
-   if (op1 < op2) begin
-      re = 1;
-   end else begin
-      re = 0;
-   end
- end
-   if (fu_3 == 3'b101) begin
-   if (op1 >= op2) begin
-      re = 1;
-   end else begin
-      re = 0;
-   end
- end 
-   if (fu_3 == 3'b110) begin
-   if (op1 < op2) begin
-      re = 1;
-   end else begin
-      re = 0;
-   end
- end
-   if (fu_3 == 3'b111) begin
-   if (op1 >= op2) begin
-      re = 1;
-   end else begin
-      re = 0;
-   end
- end
-
+       case (fu_3)
+          3'b000 : re = (op1 == op2) ? 1 : 0 ;
+          3'b001 : re = (op1 != op2) ? 1 : 0 ;
+          3'b100 : re = (op1 < op2) ? 1 : 0 ;
+          3'b101 : re = (op1 >= op2) ? 1 : 0 ;
+          3'b110 : re = (op1 < op2) ? 1 : 0 ;
+          3'b111 : re = (op1 >= op2) ? 1 : 0 ;
+       endcase
     end
  end
    
