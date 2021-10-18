@@ -1,0 +1,15 @@
+../src/rv_1.0.0/rtl/adder.v
+../src/rv_1.0.0/rtl/ALU.v
+../src/rv_1.0.0/rtl/branch.v
+../src/rv_1.0.0/rtl/byte_access.v
+../src/rv_1.0.0/rtl/control.v
+../src/rv_1.0.0/rtl/data_mem.v
+../src/rv_1.0.0/rtl/immediate.v
+../src/rv_1.0.0/rtl/mux1_2.v
+../src/rv_1.0.0/rtl/mux2_4.v
+../src/rv_1.0.0/rtl/PC.v
+../src/rv_1.0.0/rtl/ram.v
+../src/rv_1.0.0/rtl/reg_file.v
+../src/rv_1.0.0/rtl/top.v
+../src/rv_1.0.0/rtl/unit.v
+../src/rv_1.0.0/tb/top_tb.v

@@ -1,0 +1,56 @@
+dependencies:
+  ::rv:1.0.0: []
+files:
+- core: ::rv:1.0.0
+  file_type: verilogSource
+  name: ../src/rv_1.0.0/rtl/adder.v
+- core: ::rv:1.0.0
+  file_type: verilogSource
+  name: ../src/rv_1.0.0/rtl/ALU.v
+- core: ::rv:1.0.0
+  file_type: verilogSource
+  name: ../src/rv_1.0.0/rtl/branch.v
+- core: ::rv:1.0.0
+  file_type: verilogSource
+  name: ../src/rv_1.0.0/rtl/byte_access.v
+- core: ::rv:1.0.0
+  file_type: verilogSource
+  name: ../src/rv_1.0.0/rtl/control.v
+- core: ::rv:1.0.0
+  file_type: verilogSource
+  name: ../src/rv_1.0.0/rtl/data_mem.v
+- core: ::rv:1.0.0
+  file_type: verilogSource
+  name: ../src/rv_1.0.0/rtl/immediate.v
+- core: ::rv:1.0.0
+  file_type: verilogSource
+  name: ../src/rv_1.0.0/rtl/mux1_2.v
+- core: ::rv:1.0.0
+  file_type: verilogSource
+  name: ../src/rv_1.0.0/rtl/mux2_4.v
+- core: ::rv:1.0.0
+  file_type: verilogSource
+  name: ../src/rv_1.0.0/rtl/PC.v
+- core: ::rv:1.0.0
+  file_type: verilogSource
+  name: ../src/rv_1.0.0/rtl/ram.v
+- core: ::rv:1.0.0
+  file_type: verilogSource
+  name: ../src/rv_1.0.0/rtl/reg_file.v
+- core: ::rv:1.0.0
+  file_type: verilogSource
+  name: ../src/rv_1.0.0/rtl/top.v
+- core: ::rv:1.0.0
+  file_type: verilogSource
+  name: ../src/rv_1.0.0/rtl/unit.v
+- core: ::rv:1.0.0
+  file_type: verilogSource
+  name: ../src/rv_1.0.0/tb/top_tb.v
+hooks: {}
+name: rv_1.0.0
+parameters: {}
+tool_options:
+  icarus: {}
+toplevel: top_tb
+version: 0.2.1
+vpi: []
