@@ -1,0 +1,44 @@
+CAPI=2:                                                                                                             
+                                                                 
+name: ::rv:1.0.0                                                                 
+description: RV32I                                                                 
+                                                                 
+filesets:                                                                 
+  rtl:                                                                 
+    files:                                                                 
+      - rtl/adder.v                                                                 
+      - rtl/ALU.v                                                                 
+      - rtl/branch.v                                                                 
+      - rtl/byte_access.v                                                                 
+      - rtl/control.v                                                                 
+      - rtl/data_mem.v                                                                 
+      - rtl/immediate.v                                                                 
+      - rtl/mux1_2.v                                                                 
+      - rtl/mux2_4.v                                                                 
+      - rtl/PC.v                                                                 
+      - rtl/ram.v                                                                 
+      - rtl/reg_file.v                                                                 
+      - rtl/top.v                                                                 
+      - rtl/unit.v                                                                   
+    file_type: verilogSource                                                                 
+                                                                 
+  tb:                                                                 
+    files:                                                                 
+      - tb/top_tb.v                                                                 
+    file_type: verilogSource                                                                  
+                                                                 
+targets:                                                                 
+  default: &default                                                                 
+    filesets:                                                                 
+      - rtl                                                                 
+    toplevel: top                                                                 
+                                                                 
+  sim:                                                                 
+    <<: *default                                                                 
+    description: Simulate the design                                                                 
+    default_tool: icarus                                                                 
+    filesets_append:                                                                  
+      - tb                                                                     
+    toplevel: top_tb                                                                 
+                                                         
+                                                                 
