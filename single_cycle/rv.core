@@ -1,0 +1,64 @@
+CAPI=2:                                                                                                             
+                                                                 
+name: ::rv:1.0.1                                                                 
+description: RV32I                                                                 
+                                                                 
+filesets:                                                                 
+  rtl:                                                                 
+    files:                                                                 
+      - rtl/adder.v                                                                 
+      - rtl/ALU.v                                                                 
+      - rtl/branch.v                                                                 
+      - rtl/byte_access.v                                                                 
+      - rtl/control.v                                                                 
+      - rtl/immediate.v                                                                 
+      - rtl/mux1_2.v                                                                 
+      - rtl/mux2_4.v                                                                 
+      - rtl/PC.v                                                                   
+      - rtl/reg_file.v                                                                 
+      - rtl/top.v                                                                 
+      - rtl/unit.v   
+      - rtl/wrapper.v
+      - rtl/arbiter.v
+      - rtl/ram.v                                                              
+    file_type: verilogSource                                                                 
+                                                                 
+  tb:                                                                 
+    files:                                                                 
+      - tb/top.cpp                                                                
+    file_type: cppSource 
+    
+  verilog_tb:
+    files:
+      - tb/top_tb.v
+    file_type: verilogSource		                                                                 
+                                                                 
+targets:                                                                 
+  default: &default                                                                 
+    filesets:                                                                 
+      - rtl                                                                 
+    toplevel: wrapper                                                                 
+
+  verilator_tb:
+    default_tool : verilator
+    filesets : [rtl,  tb] 
+    parameters : [RISCV_FORMAL]
+    tools:
+      verilator:
+        verilator_options:
+          - '--trace'
+    toplevel : wrapper
+    
+  sim:                                                                 
+    <<: *default                                                                 
+    description: Simulate the design                                                                 
+    default_tool: icarus                                                                 
+    filesets_append:                                                                  
+      - verilog_tb                                                                     
+    toplevel: top_tb 
+    
+    
+parameters:
+  RISCV_FORMAL:
+    datatype  : bool
+    paramtype : vlogdefine

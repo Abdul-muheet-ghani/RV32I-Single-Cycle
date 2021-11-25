@@ -1,0 +1,64 @@
+dependencies:
+  ::rv:1.0.1: []
+files:
+- core: ::rv:1.0.1
+  file_type: verilogSource
+  name: ../src/rv_1.0.1/rtl/adder.v
+- core: ::rv:1.0.1
+  file_type: verilogSource
+  name: ../src/rv_1.0.1/rtl/ALU.v
+- core: ::rv:1.0.1
+  file_type: verilogSource
+  name: ../src/rv_1.0.1/rtl/branch.v
+- core: ::rv:1.0.1
+  file_type: verilogSource
+  name: ../src/rv_1.0.1/rtl/byte_access.v
+- core: ::rv:1.0.1
+  file_type: verilogSource
+  name: ../src/rv_1.0.1/rtl/control.v
+- core: ::rv:1.0.1
+  file_type: verilogSource
+  name: ../src/rv_1.0.1/rtl/immediate.v
+- core: ::rv:1.0.1
+  file_type: verilogSource
+  name: ../src/rv_1.0.1/rtl/mux1_2.v
+- core: ::rv:1.0.1
+  file_type: verilogSource
+  name: ../src/rv_1.0.1/rtl/mux2_4.v
+- core: ::rv:1.0.1
+  file_type: verilogSource
+  name: ../src/rv_1.0.1/rtl/PC.v
+- core: ::rv:1.0.1
+  file_type: verilogSource
+  name: ../src/rv_1.0.1/rtl/reg_file.v
+- core: ::rv:1.0.1
+  file_type: verilogSource
+  name: ../src/rv_1.0.1/rtl/top.v
+- core: ::rv:1.0.1
+  file_type: verilogSource
+  name: ../src/rv_1.0.1/rtl/unit.v
+- core: ::rv:1.0.1
+  file_type: verilogSource
+  name: ../src/rv_1.0.1/rtl/wrapper.v
+- core: ::rv:1.0.1
+  file_type: verilogSource
+  name: ../src/rv_1.0.1/rtl/arbiter.v
+- core: ::rv:1.0.1
+  file_type: verilogSource
+  name: ../src/rv_1.0.1/rtl/ram.v
+- core: ::rv:1.0.1
+  file_type: cppSource
+  name: ../src/rv_1.0.1/tb/top.cpp
+hooks: {}
+name: rv_1.0.1
+parameters:
+  RISCV_FORMAL:
+    datatype: bool
+    paramtype: vlogdefine
+tool_options:
+  verilator:
+    verilator_options:
+    - --trace
+toplevel: wrapper
+version: 0.2.1
+vpi: []

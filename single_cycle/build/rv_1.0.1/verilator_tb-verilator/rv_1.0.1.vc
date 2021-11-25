@@ -1,0 +1,20 @@
+--Mdir .
+--cc
+../src/rv_1.0.1/rtl/adder.v
+../src/rv_1.0.1/rtl/ALU.v
+../src/rv_1.0.1/rtl/branch.v
+../src/rv_1.0.1/rtl/byte_access.v
+../src/rv_1.0.1/rtl/control.v
+../src/rv_1.0.1/rtl/immediate.v
+../src/rv_1.0.1/rtl/mux1_2.v
+../src/rv_1.0.1/rtl/mux2_4.v
+../src/rv_1.0.1/rtl/PC.v
+../src/rv_1.0.1/rtl/reg_file.v
+../src/rv_1.0.1/rtl/top.v
+../src/rv_1.0.1/rtl/unit.v
+../src/rv_1.0.1/rtl/wrapper.v
+../src/rv_1.0.1/rtl/arbiter.v
+../src/rv_1.0.1/rtl/ram.v
+--top-module wrapper
+--exe
+../src/rv_1.0.1/tb/top.cpp
