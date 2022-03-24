@@ -100,7 +100,7 @@ lw x4,0x0(x4)
 ```
 #### Save the Dump code in `all files` formate and load image in Instruction Memory
 
-# 5 Stage pipelining
+# 5 Stage pipelining In Logisim
 ![5 Stage pipelinig on logisim](https://user-images.githubusercontent.com/81433387/131259315-fa40cbd7-f852-45cf-aeb6-01deef912874.png)
 
 ---
