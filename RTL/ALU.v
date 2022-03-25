@@ -1,6 +1,6 @@
 module ALU (
    op,op1,op2,res
- );
+); //Module ALU
    input [3:0]op;
    input [31:0]op1,op2;
    output reg signed [31:0]res ;
