@@ -2,7 +2,7 @@
 ![single cycle](https://user-images.githubusercontent.com/81433387/112760956-4b2d4080-9012-11eb-8a8a-48a488396f03.PNG)
 
 ## Description
-This repository contains RISC-V Single Cycle 32 Bit Processor simulation on Logic Simulator called [Logisim](http://www.cburch.com/logisim/download.html "website"). This circuit contains 32 bit ALU, 32 bit Data Bus, 16KB ROM/RAM, 12 Bit Address Bus for both RAM MAR(memory address register). Register File contains 32 Registers with data width of 32 bits. Troubleshooting codes used to verify all the circuit components.
+This repository contains RISC-V Single Cycle 32 Bit Processor Core simulation on Logic Simulator called [Logisim](http://www.cburch.com/logisim/download.html "website"). This circuit contains 32 bit ALU, 32 bit Data Bus, 16KB ROM/RAM, 12 Bit Address Bus for both RAM MAR(memory address register). Register File contains 32 Registers with data width of 32 bits. Troubleshooting codes used to verify all the circuit components.
 
 ## Component
 - ALU
