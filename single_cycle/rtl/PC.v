@@ -3,14 +3,14 @@ module PC (
 );
 
  input clk,we;
- input logic [31:0] in;
- output logic [31:0] out;
+ input [31:0] in;
+ output reg [31:0] out;
 
  always @(posedge clk) begin
    if (we==1) begin
-      out <= 0;
+      out = 32'd0;
    end else begin
-      out <= in;
+      out = in;
    end
 end   
 endmodule

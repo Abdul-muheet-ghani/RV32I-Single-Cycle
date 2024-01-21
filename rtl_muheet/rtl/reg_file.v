@@ -17,9 +17,9 @@ module reg_file (
  
  reg [31:0] reg_file1[31:0];
 
- always @(posedge clk ) begin
+ always @(posedge clk) begin
     if (reset == 1) begin
-      for (i = 0 ; i<=31 ; i++) begin
+      for (i = 0 ; i<=31; i=i+1) begin
          reg_file1[i]=0;
       end 
     end else begin

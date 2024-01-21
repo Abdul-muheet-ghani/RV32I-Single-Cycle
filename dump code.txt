@@ -1,28 +1,54 @@
 v2.0 raw
-00200113
-00300193
-00310233
-40218233
-00001697
-00001737
-003172B3
-00117293
-00316333
-00116313
-003143B3
-00114393
-00311433
-00111413
-003154B3
-004000EF
-00628A63
-00115493
-00312533
-00112513
-003135B3
-00113593
-40315633
-40115613
-06400167
-00422023
-00022203
+00200193
+00100213
+00A00293
+00120213
+00218193
+00520463
+FF5FF0EF
+
+RV32-I Signle Cycle processor on logisim, Computer Architecture, RISC-V,  #MERL-U.I.T.U Muheet Ghani
+
+--------------------------------
+
+In this video I will discuss about Single Cycle Processor On logisim which is RV32-I integer base Instructions RISC-V based architecture. 
+
+how to download ISPSoftware
+download link
+https://youtu.be/pfe-4e455oY
+
+fatek or winproladder PLC software download link
+https://youtu.be/M3v9sa1zadI
+
+major voting project using logic gates
+https://youtu.be/kOJMtjR8QZw
+
+for IOT project in proteus click the link below
+https://youtu.be/RPhdqHY9i5c
+
+click the link below for arduino library
+https://youtu.be/JQzdvBleW6Y
+
+click the link below for download the proteus professional full crack
+https://youtu.be/aK9bXqJvAyI
+
+click the link below for download blender
+https://www.filepuma.com/download/ble...
+
+for C++ projects plz click the link below
+https://youtu.be/qTCJG99RxC0
+
+If you have any Question related to this video or related to the Electronics then please ask from me in the comment section I will reply you as soon as possible.
+
+If you want from me to make any Electronics Project then ask from me in the comment section I will help you.
+
+If you want from me to make any Electronics Project then connect me in fiverr account
+https://www.fiverr.com/muheet_sv_exprt/do-systemverilog-rtl-designing-testing-and-fpga-emulation?context_referrer=search_gigs&source=main_banner&ref_ctx_id=201af89ba35ed8c82e33d3b00b705286&pckg_id=1&pos=2&context_type=auto&funnel=201af89ba35ed8c82e33d3b00b705286&imp_id=cd0cabf5-ee5d-407c-ad44-c461edf1bb6b
+
+If you Learn Something then Please SUBSCRIBE! for more ELECTRICAL ENGINEERING GUIDE. Also LIKE & SHARE
+
+#electricalengineeringguide#RISC-V#SingleCycleProcessorOnLogisim#Logisim#EmbeddedSystem
+
+---------------------------------------------------------
+
+Signle Cycle processor on logisim,Computer Architecture,RISC-V,Muheet Ghani,MERL,UIT,RV32I,Embedded System,IC designing,FPGA Course,electricalengineeringguide,SingleCycleProcessorOnLogisim
