@@ -1,0 +1,20 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../RV32I-Single-Cycle/rtl_muheet/rtl/ALU.v" \
+"../../../../../RV32I-Single-Cycle/rtl_muheet/rtl/PC.v" \
+"../../../../../RV32I-Single-Cycle/rtl_muheet/rtl/adder.v" \
+"../../../../../RV32I-Single-Cycle/rtl_muheet/rtl/branch.v" \
+"../../../../../RV32I-Single-Cycle/rtl_muheet/rtl/control.v" \
+"../../../../../RV32I-Single-Cycle/rtl_muheet/rtl/immediate.v" \
+"../../../../../RV32I-Single-Cycle/rtl_muheet/rtl/mux1_2.v" \
+"../../../../../RV32I-Single-Cycle/rtl_muheet/rtl/mux2_4.v" \
+"../../../../../RV32I-Single-Cycle/rtl_muheet/rtl/reg_file.v" \
+"../../../../../RV32I-Single-Cycle/rtl_muheet/rtl/top.v" \
+"../../../../../RV32I-Single-Cycle/rtl_muheet/rtl/unit.v" \
+"../../../../../RV32I-Single-Cycle/rtl_muheet/tb/top_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
