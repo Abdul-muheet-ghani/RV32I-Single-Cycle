@@ -30,7 +30,7 @@
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-    <Option Name="WTXSimLaunchSim" Val="36"/>
+    <Option Name="WTXSimLaunchSim" Val="47"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -58,24 +58,6 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/PC.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Verilog/single_cycle/PC.v"/>
-          <Attr Name="ImportTime" Val="1705853957"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/RV32I-Single-Cycle/single_cycle/rtl/PC.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../single_cycle/rtl/PC.v"/>
-          <Attr Name="ImportTime" Val="1705853024"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/Type_decoder.v">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../Verilog/single_cycle/Type_decoder.v"/>
@@ -139,24 +121,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/mux1_2.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Verilog/single_cycle/mux1_2.v"/>
-          <Attr Name="ImportTime" Val="1688203928"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/mux2_4.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Verilog/single_cycle/mux2_4.v"/>
-          <Attr Name="ImportTime" Val="1688203928"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/register_file.v">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../Verilog/single_cycle/register_file.v"/>
@@ -175,11 +139,41 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/single_cycle/byte_access.v">
+      <File Path="$PSRCDIR/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/mux1_2.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Verilog/single_cycle/byte_access.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Verilog/single_cycle/mux1_2.v"/>
           <Attr Name="ImportTime" Val="1688203928"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/mux2_4.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Verilog/single_cycle/mux2_4.v"/>
+          <Attr Name="ImportTime" Val="1688203928"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/RV32I-Single-Cycle/single_cycle/rtl/PC.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../single_cycle/rtl/PC.v"/>
+          <Attr Name="ImportTime" Val="1705853024"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/PC.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Verilog/single_cycle/PC.v"/>
+          <Attr Name="ImportTime" Val="1705853957"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -187,7 +181,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="as"/>
+        <Option Name="TopModule" Val="RV32I"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
@@ -199,10 +193,8 @@
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sim_1/imports/muheet-ghani/RV32I-Single-Cycle/Verilog/single_cycle/memo_tb.v">
+      <File Path="$PSRCDIR/sim_1/imports/muheet-ghani/RV32I-Single-Cycle/Verilog/single_cycle/top_tb.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Verilog/single_cycle/memo_tb.v"/>
-          <Attr Name="ImportTime" Val="1705854909"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -225,7 +217,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="memo_tb"/>
+        <Option Name="TopModule" Val="top_tb"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="TransportPathDelay" Val="0"/>
