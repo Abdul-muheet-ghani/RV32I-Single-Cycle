@@ -49,7 +49,7 @@ module top_tb;
 
     initial begin
         $dumpfile("fetch.vcd");
-        $dumpvars(0,memo_tb);
+        $dumpvars(0,top_tb);
         we = 1;
         #10;
         we = 0;
