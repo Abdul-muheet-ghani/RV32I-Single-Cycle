@@ -1,17 +1,15 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
-"../../../../../RV32I-Single-Cycle/rtl_muheet/rtl/ALU.v" \
-"../../../../../RV32I-Single-Cycle/rtl_muheet/rtl/PC.v" \
-"../../../../../RV32I-Single-Cycle/rtl_muheet/rtl/adder.v" \
-"../../../../../RV32I-Single-Cycle/rtl_muheet/rtl/branch.v" \
-"../../../../../RV32I-Single-Cycle/rtl_muheet/rtl/control.v" \
-"../../../../../RV32I-Single-Cycle/rtl_muheet/rtl/immediate.v" \
-"../../../../../RV32I-Single-Cycle/rtl_muheet/rtl/mux1_2.v" \
-"../../../../../RV32I-Single-Cycle/rtl_muheet/rtl/mux2_4.v" \
-"../../../../../RV32I-Single-Cycle/rtl_muheet/rtl/reg_file.v" \
-"../../../../../RV32I-Single-Cycle/rtl_muheet/rtl/top.v" \
-"../../../../../RV32I-Single-Cycle/rtl_muheet/rtl/unit.v" \
-"../../../../../RV32I-Single-Cycle/rtl_muheet/tb/top_tb.v" \
+"../../../../RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/Type_decoder.v" \
+"../../../../RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/alu.v" \
+"../../../../RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/branch.v" \
+"../../../../RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/control_unit.v" \
+"../../../../RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/data.v" \
+"../../../../RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/imm.v" \
+"../../../../RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/instruction_memo.v" \
+"../../../../RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/register_file.v" \
+"../../../../RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/top.v" \
+"../../../../RV32IMC.srcs/sim_1/imports/muheet-ghani/RV32I-Single-Cycle/Verilog/single_cycle/top_tb.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

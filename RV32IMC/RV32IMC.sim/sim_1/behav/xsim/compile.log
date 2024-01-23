@@ -1,29 +1,21 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet-ghani/RV32I-Single-Cycle/Verilog/single_cycle/PC.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module adder
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet-ghani/RV32I-Single-Cycle/single_cycle/rtl/PC.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module PC
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet-ghani/RV32I-Single-Cycle/Verilog/single_cycle/Type_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/Type_decoder.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module control
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet-ghani/RV32I-Single-Cycle/Verilog/single_cycle/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/alu.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ALU
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet-ghani/RV32I-Single-Cycle/Verilog/single_cycle/branch.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/branch.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module branch
-WARNING: [VRFC 10-143] fu_3 was previously declared with a range [/home/muheet-ghani/RV32I-Single-Cycle/Verilog/single_cycle/branch.v:9]
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet-ghani/RV32I-Single-Cycle/Verilog/single_cycle/control_unit.v" into library xil_defaultlib
+WARNING: [VRFC 10-143] fu_3 was previously declared with a range [/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/branch.v:9]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/control_unit.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module unit
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet-ghani/RV32I-Single-Cycle/Verilog/single_cycle/data.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/data.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module data_mem
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet-ghani/RV32I-Single-Cycle/Verilog/single_cycle/imm.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/imm.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module immediate
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet-ghani/RV32I-Single-Cycle/Verilog/single_cycle/instruction_memo.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/instruction_memo.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ram
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet-ghani/RV32I-Single-Cycle/Verilog/single_cycle/mux1_2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux1_2
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet-ghani/RV32I-Single-Cycle/Verilog/single_cycle/mux2_4.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux2_4
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet-ghani/RV32I-Single-Cycle/Verilog/single_cycle/register_file.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/register_file.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module reg_file
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet-ghani/RV32I-Single-Cycle/Verilog/single_cycle/top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module as
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet-ghani/RV32I-Single-Cycle/Verilog/single_cycle/memo_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module memo_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RV32I
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sim_1/imports/muheet-ghani/RV32I-Single-Cycle/Verilog/single_cycle/top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_tb
