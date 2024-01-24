@@ -1,19 +1,19 @@
 module data_mem (
-    clk,addr,d,str,ld,resu
+    clk_in,address_in,store_data_in,store_en_in,load_en_in,data_out
  );
 
- input clk,str,ld;
- input [31:0]addr,d;
- output reg [31:0] resu;
+ input clk_in,store_en_in,load_en_in;
+ input [31:0]address_in,store_data_in;
+ output reg [31:0] data_out;
  reg [11:0]ad1 ;
  reg [31:0] data_rom[1024-1:0];
    
- always @(clk) begin
-    if (str) begin
-       data_rom[addr] <= d;
+ always @(clk_in) begin
+    if (store_en_in) begin
+       data_rom[address_in] <= store_data_in;
     end
-    if (ld) begin
-      resu = data_rom[addr];
+    if (load_en_in) begin
+      data_out = data_rom[address_in];
    end
  end
 

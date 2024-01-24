@@ -1,22 +1,22 @@
 module branch (
-   op1,op2,fu_3,en,re
+   operand1_in,operand2_in,function_3_in,branch_en_in,branch_taken_out
  );
 
- input [31:0]op1,op2;
- input [2:0]fu_3;
- input en;
- output reg re;
- wire fu_3;
+ input [31:0]operand1_in,operand2_in;
+ input [2:0]function_3_in;
+ input branch_en_in;
+ output reg branch_taken_out;
+ wire function_3_in;
 
  always @* begin
-    if(en==1)begin
-       case (fu_3)
-          3'b000 : re = (op1 == op2) ? 1 : 0 ;
-          3'b001 : re = (op1 != op2) ? 1 : 0 ;
-          3'b100 : re = ($signed (op1) < $signed (op2)) ? 1 : 0 ;
-          3'b101 : re = ($signed (op1) >= $signed (op2)) ? 1 : 0 ;
-          3'b110 : re = (op1 < op2) ? 1 : 0 ;
-          3'b111 : re = (op1 >= op2) ? 1 : 0 ;
+    if(branch_en_in==1)begin
+       case (function_3_in)
+          3'b000 : branch_taken_out = (operand1_in == operand2_in) ? 1 : 0 ;
+          3'b001 : branch_taken_out = (operand1_in != operand2_in) ? 1 : 0 ;
+          3'b100 : branch_taken_out = ($signed (operand1_in) < $signed (operand2_in)) ? 1 : 0 ;
+          3'b101 : branch_taken_out = ($signed (operand1_in) >= $signed (operand2_in)) ? 1 : 0 ;
+          3'b110 : branch_taken_out = (operand1_in < operand2_in) ? 1 : 0 ;
+          3'b111 : branch_taken_out = (operand1_in >= operand2_in) ? 1 : 0 ;
        endcase
     end
  end

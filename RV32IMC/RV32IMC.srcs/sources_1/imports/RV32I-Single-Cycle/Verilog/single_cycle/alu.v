@@ -1,25 +1,25 @@
 module ALU (
-   op,op1,op2,res
+   alu_operand_in,operand1_in,operand2_in,alu_result_out
  );
-   input [3:0]op;
-   input [31:0]op1,op2;
-   output reg signed [31:0]res ;
+   input [3:0]alu_operand_in;
+   input [31:0]operand1_in,operand2_in;
+   output reg signed [31:0]alu_result_out ;
 
 
  always @* begin
-      case (op)
-         4'b0000 : res = op1 + op2; 
-         4'b0001 : res = op1 - op2;
-         4'b0010 : res = op1 & op2;
-         4'b0011 : res = op1 | op2;
-         4'b0100 : res = op1 ^ op2;
-         4'b0101 : res = op1 << op2;
-         4'b0110 : res = op1 >> op2;
-         4'b0111 : res[0] = (op1 < op2) ? 1 : 0;
-         4'b1000 : res[0] = ($signed (op1) < $signed (op2)) ? 1 : 0;
-         4'b1001 : res = op1 >>> op2;
-         4'b1111 : res = op1 ;
-         default: res = 0;
+      case (alu_operand_in)
+         4'b0000 : alu_result_out = operand1_in + operand2_in; 
+         4'b0001 : alu_result_out = operand1_in - operand2_in;
+         4'b0010 : alu_result_out = operand1_in & operand2_in;
+         4'b0011 : alu_result_out = operand1_in | operand2_in;
+         4'b0100 : alu_result_out = operand1_in ^ operand2_in;
+         4'b0101 : alu_result_out = operand1_in << operand2_in;
+         4'b0110 : alu_result_out = operand1_in >> operand2_in;
+         4'b0111 : alu_result_out[0] = (operand1_in < operand2_in) ? 1 : 0;
+         4'b1000 : alu_result_out[0] = ($signed (operand1_in) < $signed (operand2_in)) ? 1 : 0;
+         4'b1001 : alu_result_out = operand1_in >>> operand2_in;
+         4'b1111 : alu_result_out = operand1_in ;
+         default: alu_result_out = 0;
       endcase
  end
 
