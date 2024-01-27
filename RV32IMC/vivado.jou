@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Jan 27 14:21:29 2024
+# Process ID: 4102
+# Current directory: /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC
+# Command line: vivado RV32IMC.xpr
+# Log file: /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/vivado.log
+# Journal file: /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project RV32IMC.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+open_wave_config /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sim_1/imports/muheet-ghani/RV32IMZ-Muheet/memo_tb_behav.wcfg
+source top_tb.tcl
+restart
+run all
+current_wave_config {memo_tb_behav.wcfg}
+add_wave {{/top_tb/RV32I_i/i_branch/operand1_in}} {{/top_tb/RV32I_i/i_branch/operand2_in}} {{/top_tb/RV32I_i/i_branch/branch_en_in}} {{/top_tb/RV32I_i/i_branch/branch_taken_out}} {{/top_tb/RV32I_i/i_branch/function_3_in}} 
+current_wave_config {memo_tb_behav.wcfg}
+add_wave {{/top_tb/RV32I_i/i_ALU/operand1_in}} {{/top_tb/RV32I_i/i_ALU/operand2_in}} {{/top_tb/RV32I_i/i_ALU/alu_result_out}} 
+restart
+run all
+save_wave_config {/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sim_1/imports/muheet-ghani/RV32IMZ-Muheet/memo_tb_behav.wcfg}

@@ -36,7 +36,7 @@ module RV32I_top #(parameter XLEN = 32)
    wire [XLEN-1:0] operand2;
    wire [XLEN-1:0] reg_1;
    wire [XLEN-1:0] reg_2;
-   wire [XLEN-1:0] immediate;
+   wire [XLEN-1:0] immediate_data;
    wire [XLEN-1:0] ALU_OUTPUT;
    wire [XLEN-1:0] write_adder;
    wire [XLEN-1:0] write_back;
@@ -63,14 +63,14 @@ module RV32I_top #(parameter XLEN = 32)
                   (control_unit_out[10:9] == 2'b11) ? 32'b0 : 0;
 
    // output of control unit [1:0] is for immediate select
-   assign immediate = (control_unit_out[1:0] == 2'b00) ? 32'b0 :
+   assign immediate_data = (control_unit_out[1:0] == 2'b00) ? 32'b0 :
                       (control_unit_out[1:0] == 2'b01) ? U_type :
                       (control_unit_out[1:0] == 2'b10) ? I_type :
                       (control_unit_out[1:0] == 2'b11) ? S_type : 0;
                
    // Output of control unit bit 8 presents operand b selection 
    // either be it immediate or reg2            
-   assign reg_2 = (control_unit_out[8]) ? immediate : operand2;
+   assign reg_2 = (control_unit_out[8]) ? immediate_data : operand2;
 
    // Output of control unit control_unit_out[12] present mem_write enable
    // Output of control unit control_unit_out[13] present mem_to_reg enable
@@ -80,7 +80,7 @@ module RV32I_top #(parameter XLEN = 32)
    assign OUT_T = (branch_p) ? SB_type : offset_adder;
 
    // 11:7 destination register
-   assign rd = contrl_decoder[3] ? 5'b00001 : inst_out[11:7];;
+   assign rd = contrl_decoder[3] ? 5'b00001 : inst_out[11:7];
 
    /////////////////////////////////////////////////////////
    //Module Instantiation
@@ -94,18 +94,18 @@ module RV32I_top #(parameter XLEN = 32)
                        .we_in           (we)
                      ); 
 
-   control control_decoder(.opcode_in  (inst_out),
+   control i_control_decoder(.opcode_in  (inst_out),
                            .decoded_out(contrl_decoder)
                            );
 
-   unit control_unit(.type_decode_in  (contrl_decoder),
+   unit i_control_unit(.type_decode_in  (contrl_decoder),
                      .function_3_in   (inst_out[14:12]),
                      .function_7_in   (inst_out[30]),
                      .control_unit_out(control_unit_out)
                      );
 
    // Output of control unit 5:2 is ALU operand for selecting operation (i.e +,-,or,xor etc)
-   ALU ALU(.alu_operand_in(control_unit_out[5:2]),
+   ALU i_ALU(.alu_operand_in(control_unit_out[5:2]),
            .operand1_in   (reg_1),
            .operand2_in   (reg_2),
            .alu_result_out(ALU_OUTPUT)
@@ -113,7 +113,7 @@ module RV32I_top #(parameter XLEN = 32)
 
    // 14:12 function 3
    // Ouput of control unit bit 11 presents branch enable
-   branch branch(.operand1_in     (reg_1),
+   branch i_branch(.operand1_in     (reg_1),
                  .operand2_in     (reg_2),
                  .function_3_in   (inst_out[14:12]),
                  .branch_en_in    (control_unit_out[11]),
@@ -122,7 +122,7 @@ module RV32I_top #(parameter XLEN = 32)
 
    // Output of control unit control_unit_out[12] present mem_write enable
    // output of control unit control_unit_out[13] present mem_to_reg enable
-   data_mem data_mem(.clk_in        (clk),
+   data_mem i_data_mem(.clk_in        (clk),
                      .address_in    (ALU_OUTPUT),
                      .store_data_in (operand2),
                      .store_en_in   (control_unit_out[12]),
@@ -132,7 +132,7 @@ module RV32I_top #(parameter XLEN = 32)
 
    // 19:15 rs1 address
    // 24:20 rs2 address
-   reg_file reg_file(.clk_in                 (clk),
+   reg_file i_reg_file(.clk_in                 (clk),
                      .reset_in               (reset),
                      .rs1_address_in         (inst_out[19:15]),
                      .rs2_address_in         (inst_out[24:20]),
@@ -142,7 +142,7 @@ module RV32I_top #(parameter XLEN = 32)
                      .rs2_data_out           (operand2)
                      );
 
-   immediate immediate(.instruction_in    (inst_out),
+   immediate i_immediate(.instruction_in    (inst_out),
                        .pc_in             (address_q),
                        .I_type_imm_out    (I_type),
                        .S_type_imm_out    (S_type),

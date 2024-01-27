@@ -9,7 +9,7 @@ module reg_file (
    reset_in
  );
 
- input clk_in,reset;
+ input clk_in,reset_in;
  input [4:0]rs1_address_in,rs2_address_in,destination_register_in;
  input [31:0]input_data_in;
  output wire [31:0]rs1_data_out,rs2_data_out;

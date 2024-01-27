@@ -17,7 +17,7 @@ module ram #(
     input             we_in,
     input      [11:0] address_in,
     input      [31:0] data_in,
-    output reg [31:0] instruction_out we_in
+    output reg [31:0] instruction_out
    );
 
    /////////////////////////////////////////////////////////

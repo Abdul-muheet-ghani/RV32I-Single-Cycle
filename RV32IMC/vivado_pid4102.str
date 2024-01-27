@@ -1,0 +1,653 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:02:38 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 4102
+License: Customer
+
+Current time: 	Sat Jan 27 14:22:32 PKT 2024
+Time zone: 	Pakistan Time (Asia/Karachi)
+
+OS: Ubuntu
+OS Version: 5.15.0-86-generic
+OS Architecture: amd64
+Available processors (cores): 4
+
+Display: :0
+Screen size: 1366x768
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 15 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	/opt/Xilinx/Vivado/2018.2/tps/lnx64/jre
+Java executable location: 	/opt/Xilinx/Vivado/2018.2/tps/lnx64/jre/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	muheet-ghani
+User home directory: /home/muheet-ghani
+User working directory: /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /opt/Xilinx/Vivado
+HDI_APPROOT: /opt/Xilinx/Vivado/2018.2
+RDI_DATADIR: /opt/Xilinx/Vivado/2018.2/data
+RDI_BINDIR: /opt/Xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: /home/muheet-ghani/.Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: /home/muheet-ghani/.Xilinx/Vivado/2018.2/
+Vivado layouts directory: /home/muheet-ghani/.Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	/opt/Xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/vivado.log
+Vivado journal file location: 	/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-4102-Muheet-Ghani
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /opt/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: /opt/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: /opt/Xilinx/Vivado/2018.2
+XILINX_SDK: /opt/Xilinx/SDK/2018.2
+XILINX_VIVADO: /opt/Xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: /opt/Xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	140 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 859 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// [GUI Memory]: 46 MB (+45393kb) [00:00:18]
+// [Engine Memory]: 848 MB (+737892kb) [00:00:18]
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bx (ck):  Open Project : addNotify
+// Opening Vivado Project: RV32IMC.xpr. Version: Vivado v2018.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project RV32IMC.xpr 
+// HMemoryUtils.trashcanNow. Engine heap size: 869 MB. GUI used memory: 32 MB. Current time: 1/27/24 2:22:34 PM PKT
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project RV32IMC.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.2/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 984 MB (+98287kb) [00:00:35]
+// [GUI Memory]: 54 MB (+5849kb) [00:00:37]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,008 MB. GUI used memory: 37 MB. Current time: 1/27/24 2:22:49 PM PKT
+// Project name: RV32IMC; location: /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC; part: xc7a100tcsg324-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 6146.500 ; gain = 138.238 ; free physical = 6175 ; free virtual = 25111 
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [Engine Memory]: 1,043 MB (+9437kb) [00:00:42]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 62 MB (+5574kb) [00:00:52]
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 65 MB (+486kb) [00:01:20]
+// Elapsed time: 219 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_top (top.v)]", 1); // B (D, ck)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_top (top.v)]", 1); // B (D, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 7); // B (D, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 8); // B (D, ck)
+// [GUI Memory]: 70 MB (+1157kb) [00:04:32]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,091 MB. GUI used memory: 36 MB. Current time: 1/27/24 2:26:44 PM PKT
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top_tb (top_tb.v)]", 9); // B (D, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top_tb (top_tb.v), RV32I_i : RV32I_top (top.v)]", 10); // B (D, ck)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top_tb (top_tb.v), RV32I_i : RV32I_top (top.v)]", 10); // B (D, ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, ck)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (ck):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: xvlog --incr --relax -prj top_tb_vlog.prj 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '3' seconds INFO: [USF-XSim-99] Step results log file:'/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.sim/sim_1/behav/xsim/xvlog.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.sim/sim_1/behav/xsim/xvlog.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 6 seconds
+selectButton("RDIResource.ProgressDialog_ERROR_ENCOUNTERED_PLEASE_SEE_TCL_OK", "OK"); // JButton (A, G)
+// a (ck): Critical Messages: addNotify
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (ck)
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aE (Q, ck)
+selectCheckBox(PAResourceItoN.MsgView_INFORMATION_MESSAGES, (String) null, false); // g (aQ, ck): FALSE
+selectTab((HResource) null, (HResource) null, "Log", 2); // aE (Q, ck)
+selectTab((HResource) null, (HResource) null, "Reports", 3); // aE (Q, ck)
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // aE (Q, ck)
+// [Engine Memory]: 1,095 MB (+256kb) [00:05:21]
+// Elapsed time: 31 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top_tb (top_tb.v), RV32I_i : RV32I_top (top.v)]", 10); // B (D, ck)
+// PAPropertyPanels.initPanels (instruction_memo.v) elapsed time: 0.3s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top_tb (top_tb.v), RV32I_i : RV32I_top (top.v), instruction_mem : ram (instruction_memo.v)]", 11, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top_tb (top_tb.v), RV32I_i : RV32I_top (top.v), instruction_mem : ram (instruction_memo.v)]", 11, false, false, false, false, false, true); // B (D, ck) - Double Click
+// [GUI Memory]: 80 MB (+7061kb) [00:05:45]
+selectCodeEditor("instruction_memo.v", 341, 88); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 1,124 MB. GUI used memory: 38 MB. Current time: 1/27/24 2:28:24 PM PKT
+// Elapsed time: 30 seconds
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 523, 160); // dn (ae, ck)
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 523, 160, false, false, false, false, true); // dn (ae, ck) - Double Click
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 523, 160); // dn (ae, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("instruction_memo.v", 257, 86); // ce (w, ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, ck)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (ck):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: xvlog --incr --relax -prj top_tb_vlog.prj 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds INFO: [USF-XSim-99] Step results log file:'/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.sim/sim_1/behav/xsim/xvlog.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.sim/sim_1/behav/xsim/xvlog.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 4 seconds
+selectButton("RDIResource.ProgressDialog_ERROR_ENCOUNTERED_PLEASE_SEE_TCL_OK", "OK"); // JButton (A, G)
+// a (ck): Critical Messages: addNotify
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (ck)
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 222, 35); // dn (ae, ck)
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 222, 35, false, false, false, false, true); // dn (ae, ck) - Double Click
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 222, 35); // dn (ae, ck)
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top_tb (top_tb.v), RV32I_i : RV32I_top (top.v), reg_file : reg_file (register_file.v)]", 17, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top_tb (top_tb.v), RV32I_i : RV32I_top (top.v), reg_file : reg_file (register_file.v)]", 17, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("register_file.v", 20, 123); // ce (w, ck)
+selectCodeEditor("register_file.v", 129, 173); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [Engine Memory]: 1,153 MB (+3186kb) [00:07:26]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,153 MB. GUI used memory: 39 MB. Current time: 1/27/24 2:29:39 PM PKT
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, ck)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (ck):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: xvlog --incr --relax -prj top_tb_vlog.prj 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-99] Step results log file:'/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.sim/sim_1/behav/xsim/xvlog.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.sim/sim_1/behav/xsim/xvlog.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 4 seconds
+selectButton("RDIResource.ProgressDialog_ERROR_ENCOUNTERED_PLEASE_SEE_TCL_OK", "OK"); // JButton (A, G)
+// a (ck): Critical Messages: addNotify
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (ck)
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 254, 66); // dn (ae, ck)
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 254, 66, false, false, false, false, true); // dn (ae, ck) - Double Click
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 254, 66); // dn (ae, ck)
+// [GUI Memory]: 84 MB (+688kb) [00:07:45]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top_tb (top_tb.v), RV32I_i : RV32I_top (top.v)]", 10, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top_tb (top_tb.v), RV32I_i : RV32I_top (top.v)]", 10, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+// Elapsed time: 25 seconds
+selectCodeEditor("top.v", 94, 112); // ce (w, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top_tb (top_tb.v), RV32I_i : RV32I_top (top.v)]", 10); // B (D, ck)
+selectCodeEditor("top.v", 89, 70); // ce (w, ck)
+selectCodeEditor("top.v", 81, 102); // ce (w, ck)
+selectCodeEditor("top.v", 81, 102); // ce (w, ck)
+selectCodeEditor("top.v", 81, 102); // ce (w, ck)
+selectCodeEditor("top.v", 81, 102); // ce (w, ck)
+selectCodeEditor("top.v", 81, 102); // ce (w, ck)
+selectCodeEditor("top.v", 79, 75); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 13 seconds
+selectCodeEditor("top.v", 52, 124); // ce (w, ck)
+selectCodeEditor("top.v", 50, 55); // ce (w, ck)
+selectCodeEditor("top.v", 62, 38); // ce (w, ck)
+selectCodeEditor("top.v", 87, 77); // ce (w, ck)
+selectCodeEditor("top.v", 87, 89); // ce (w, ck)
+selectCodeEditor("top.v", 47, 66); // ce (w, ck)
+selectCodeEditor("top.v", 47, 66, false, false, false, false, true); // ce (w, ck) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top_tb (top_tb.v), RV32I_i : RV32I_top (top.v), i_immediate : immediate (imm.v)]", 18, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top_tb (top_tb.v), RV32I_i : RV32I_top (top.v), i_immediate : immediate (imm.v)]", 18, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("imm.v", 80, 11); // ce (w, ck)
+selectCodeEditor("imm.v", 80, 11, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "imm.v", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top.v", 3); // k (j, ck)
+// [GUI Memory]: 89 MB (+544kb) [00:09:43]
+typeControlKey((HResource) null, "top.v", 'v'); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,178 MB. GUI used memory: 41 MB. Current time: 1/27/24 2:31:59 PM PKT
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 19 seconds
+selectCodeEditor("top.v", 49, 66); // ce (w, ck)
+selectCodeEditor("top.v", 49, 66, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 34 seconds
+selectCodeEditor("top.v", 130, 137); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [Engine Memory]: 1,210 MB (+3kb) [00:10:48]
+// Elapsed time: 19 seconds
+selectCodeEditor("top.v", 358, 248); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("top.v", 198, 24); // ce (w, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,227 MB. GUI used memory: 40 MB. Current time: 1/27/24 2:33:19 PM PKT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 11 seconds
+selectCodeEditor("top.v", 157, 275); // ce (w, ck)
+selectCodeEditor("top.v", 385, 285); // ce (w, ck)
+selectCodeEditor("top.v", 382, 280); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("top.v", 231, 28); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("top.v", 219, 19); // ce (w, ck)
+// [GUI Memory]: 94 MB (+131kb) [00:11:53]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("top.v", 190, 276); // ce (w, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,260 MB. GUI used memory: 40 MB. Current time: 1/27/24 2:34:14 PM PKT
+selectCodeEditor("top.v", 412, 159); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, ck)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (ck):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: xvlog --incr --relax -prj top_tb_vlog.prj 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds INFO: [USF-XSim-99] Step results log file:'/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.sim/sim_1/behav/xsim/elaborate.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.sim/sim_1/behav/xsim/elaborate.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 7 seconds
+selectButton("RDIResource.ProgressDialog_ERROR_ENCOUNTERED_PLEASE_SEE_TCL_OK", "OK"); // JButton (A, G)
+// a (ck): Critical Messages: addNotify
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (ck)
+// Elapsed time: 39 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top_tb (top_tb.v)]", 9, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top_tb (top_tb.v)]", 9, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectCodeEditor("top_tb.v", 169, 113); // ce (w, ck)
+selectCodeEditor("top_tb.v", 169, 113); // ce (w, ck)
+selectCodeEditor("top_tb.v", 169, 113); // ce (w, ck)
+selectCodeEditor("top_tb.v", 270, 134); // ce (w, ck)
+selectCodeEditor("top_tb.v", 270, 134, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 14 seconds
+selectCodeEditor("top_tb.v", 345, 92); // ce (w, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top_tb (top_tb.v)]", 9); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top_tb (top_tb.v), RV32I_i : RV32I_top (top.v), instruction_mem : ram (instruction_memo.v)]", 11, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top_tb (top_tb.v), RV32I_i : RV32I_top (top.v)]", 10, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top_tb (top_tb.v), RV32I_i : RV32I_top (top.v)]", 10, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectCodeEditor("top.v", 186, 77); // ce (w, ck)
+selectCodeEditor("top.v", 186, 77, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("top.v", 190, 67); // ce (w, ck)
+selectCodeEditor("top.v", 190, 67); // ce (w, ck)
+selectCodeEditor("top.v", 190, 67, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "top.v", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_tb.v", 5); // k (j, ck)
+selectCodeEditor("top_tb.v", 195, 77); // ce (w, ck)
+selectCodeEditor("top_tb.v", 195, 77, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "top_tb.v", 'v'); // ce (w, ck)
+selectCodeEditor("top_tb.v", 236, 58); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 17 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top.v", 3); // k (j, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [Engine Memory]: 1,286 MB (+15948kb) [00:14:10]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,286 MB. GUI used memory: 41 MB. Current time: 1/27/24 2:36:24 PM PKT
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top_tb (top_tb.v), RV32I_i : RV32I_top (top.v)]", 10); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top_tb (top_tb.v), RV32I_i : RV32I_top (top.v), instruction_mem : ram (instruction_memo.v)]", 11, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top_tb (top_tb.v), RV32I_i : RV32I_top (top.v), instruction_mem : ram (instruction_memo.v)]", 11, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("instruction_memo.v", 59, 53); // ce (w, ck)
+selectCodeEditor("instruction_memo.v", 59, 53, false, false, false, false, true); // ce (w, ck) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top.v", 3); // k (j, ck)
+// Elapsed time: 17 seconds
+selectCodeEditor("top.v", 452, 84); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("top.v", 144, 105); // ce (w, ck)
+selectCodeEditor("top.v", 27, 49); // ce (w, ck)
+selectCodeEditor("top.v", 27, 49, false, false, false, false, true); // ce (w, ck) - Double Click
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, ck)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (ck):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.sim/sim_1/behav/xsim' 
+// Tcl Message: Built simulation snapshot top_tb_behav 
+// Tcl Message:  ****** Webtalk v2018.2 (64-bit)   **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018   **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.  source /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.sim/sim_1/behav/xsim/xsim.dir/top_tb_behav/webtalk/xsim_webtalk.tcl -notrace 
+// TclEventType: LAUNCH_SIM
+// TclEventType: LOAD_FEATURE
+// Tcl Message: INFO: [Common 17-206] Exiting Webtalk at Sat Jan 27 14:37:43 2024... 
+// Tcl Message: run_program: Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 6423.633 ; gain = 0.000 ; free physical = 6021 ; free virtual = 25047 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '12' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "top_tb_behav -key {Behavioral:sim_1:Functional:top_tb} -tclbatch {top_tb.tcl} -view {/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sim_1/imports/muheet-ghani/RV32IMZ-Muheet/memo_tb_behav.wcfg} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2018.2 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Waveform: addNotify
+// Tcl Message: open_wave_config /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sim_1/imports/muheet-ghani/RV32IMZ-Muheet/memo_tb_behav.wcfg 
+// Waveform: addNotify
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,337 MB. GUI used memory: 48 MB. Current time: 1/27/24 2:37:47 PM PKT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: source top_tb.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 1000ns 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'top_tb_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 6468.445 ; gain = 44.812 ; free physical = 5992 ; free virtual = 25034 
+// 'd' command handler elapsed time: 18 seconds
+// Elapsed time: 18 seconds
+dismissDialog("Run Simulation"); // e (ck)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (Q, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,337 MB. GUI used memory: 52 MB. Current time: 1/27/24 2:37:51 PM PKT
+selectButton(RDIResource.GraphicalView_ZOOM_FIT, "Waveform Viewer_zoom_fit"); // B (f, ck)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectButton(RDIResource.GraphicalView_ZOOM_FIT, "Waveform Viewer_zoom_fit"); // B (f, ck)
+selectButton(PAResourceCommand.PACommandNames_SIMULATION_LIVE_RESTART, "simulation_live_restart"); // B (f, ck)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_LIVE_RESTART
+// bx (ck):  Restart : addNotify
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// Tcl Message: restart 
+// Tcl Message: INFO: [Simtcl 6-17] Simulation restarted 
+dismissDialog("Restart"); // bx (ck)
+selectButton(PAResourceCommand.PACommandNames_SIMULATION_LIVE_RUN_ALL, "simulation_live_run_all"); // B (f, ck)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_LIVE_RUN_ALL
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// HMemoryUtils.trashcanNow. Engine heap size: 1,337 MB. GUI used memory: 47 MB. Current time: 1/27/24 2:37:58 PM PKT
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_STOPPED
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: run all 
+// Tcl Message: $finish called at time : 1010 ns : File "/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sim_1/imports/muheet-ghani/RV32I-Single-Cycle/Verilog/single_cycle/top_tb.v" Line 57 
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "memo_tb_behav.wcfg", 5); // k (j, ck)
+// Waveform: addNotify
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (Q, ck)
+expandTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "RV32I_i ; RV32I_top ; Verilog Module", 1); // d (O, ck)
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "i_reg_file ; reg_file ; Verilog Module", 8, "i_reg_file", 0, false); // d (O, ck)
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "i_branch ; branch ; Verilog Module", 6, "i_branch", 0, false); // d (O, ck)
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "operand1_in[31:0] ; XXXXXXXX ; Array", 0, "operand1_in[31:0]", 0, true); // m (c, ck) - Node
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "operand1_in[31:0] ; XXXXXXXX ; Array", 0, "operand1_in[31:0]", 0, true); // m (c, ck) - Node
+typeControlKey(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, (String) null, 'a'); // m (c, ck)
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "operand1_in[31:0] ; XXXXXXXX ; Array", 0, "operand1_in[31:0]", 0, true, false, false, false, true, false); // m (c, ck) - Popup Trigger - Node
+selectMenuItem((HResource) null, "Add to Wave Window"); // ad (aj, ck)
+// Tcl Command: 'current_wave_config {memo_tb_behav.wcfg}'
+// Tcl Message: current_wave_config {memo_tb_behav.wcfg} 
+// Tcl Message: memo_tb_behav.wcfg 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// Tcl Message: add_wave {{/top_tb/RV32I_i/i_branch/operand1_in}} {{/top_tb/RV32I_i/i_branch/operand2_in}} {{/top_tb/RV32I_i/i_branch/branch_en_in}} {{/top_tb/RV32I_i/i_branch/branch_taken_out}} {{/top_tb/RV32I_i/i_branch/function_3_in}}  
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "i_ALU ; ALU ; Verilog Module", 5, "i_ALU", 0, false); // d (O, ck)
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "operand1_in[31:0] ; XXXXXXXX ; Array", 1, "operand1_in[31:0]", 0, true); // m (c, ck) - Node
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "operand1_in[31:0] ; XXXXXXXX ; Array", 1, "operand1_in[31:0]", 0, true, false, false, false, true, false); // m (c, ck) - Popup Trigger - Node
+selectMenuItem((HResource) null, "Add to Wave Window"); // ad (aj, ck)
+// Tcl Command: 'current_wave_config {memo_tb_behav.wcfg}'
+// Tcl Message: current_wave_config {memo_tb_behav.wcfg} 
+// Tcl Message: memo_tb_behav.wcfg 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// Tcl Message: add_wave {{/top_tb/RV32I_i/i_ALU/operand1_in}} {{/top_tb/RV32I_i/i_ALU/operand2_in}} {{/top_tb/RV32I_i/i_ALU/alu_result_out}}  
+selectButton(PAResourceCommand.PACommandNames_SIMULATION_LIVE_RESTART, "simulation_live_restart"); // B (f, ck)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_LIVE_RESTART
+// bx (ck):  Restart : addNotify
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// HMemoryUtils.trashcanNow. Engine heap size: 1,340 MB. GUI used memory: 46 MB. Current time: 1/27/24 2:38:39 PM PKT
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// Tcl Message: restart 
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// Tcl Message: INFO: [Simtcl 6-17] Simulation restarted 
+dismissDialog("Restart"); // bx (ck)
+selectButton(PAResourceCommand.PACommandNames_SIMULATION_LIVE_RUN_ALL, "simulation_live_run_all"); // B (f, ck)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_LIVE_RUN_ALL
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_STOPPED
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: run all 
+// Tcl Message: $finish called at time : 1010 ns : File "/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sim_1/imports/muheet-ghani/RV32I-Single-Cycle/Verilog/single_cycle/top_tb.v" Line 57 
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "memo_tb_behav.wcfg*", 5); // k (j, ck)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (Q, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,341 MB. GUI used memory: 89 MB. Current time: 1/27/24 2:38:44 PM PKT
+selectButton(RDIResource.GraphicalView_ZOOM_FIT, "Waveform Viewer_zoom_fit"); // B (f, ck)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 420, 97); // n (o, ck)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 401, 88); // n (o, ck)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,341 MB. GUI used memory: 47 MB. Current time: 1/27/24 2:38:56 PM PKT
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 399, 169); // n (o, ck)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectButton(RDIResource.GraphicalView_ZOOM_IN, "Waveform Viewer_zoom_in"); // B (f, ck)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,341 MB. GUI used memory: 47 MB. Current time: 1/27/24 2:39:01 PM PKT
+selectButton(RDIResource.GraphicalView_ZOOM_IN, "Waveform Viewer_zoom_in"); // B (f, ck)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectButton(RDIResource.GraphicalView_ZOOM_IN, "Waveform Viewer_zoom_in"); // B (f, ck)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,341 MB. GUI used memory: 55 MB. Current time: 1/27/24 2:39:04 PM PKT
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 481, 62); // n (o, ck)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Run Command: RDIResourceCommand.RDICommands_WAVEFORM_SAVE_CONFIGURATION
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// Tcl Message: save_wave_config {/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sim_1/imports/muheet-ghani/RV32IMZ-Muheet/memo_tb_behav.wcfg} 
+// TclEventType: FILE_SET_CHANGE
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 481, 62); // n (o, ck)Waveform: addNotify
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (Q, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,341 MB. GUI used memory: 89 MB. Current time: 1/27/24 2:39:12 PM PKT

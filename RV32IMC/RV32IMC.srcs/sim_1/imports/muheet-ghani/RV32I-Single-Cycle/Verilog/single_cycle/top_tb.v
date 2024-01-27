@@ -26,11 +26,11 @@ module top_tb;
     //Module Instantiation
     /////////////////////////////////////////////////////////
 
-    RV32I_top RV32I_i(.clk        (clk),
-                      .we         (we),
-                      .reset      (reset),
-                      .data_in    (data_in),
-                      .data_out   (data_out)
+    RV32I_top RV32I_i(.clk                (clk),
+                      .we                 (we),
+                      .reset              (reset),
+                      .data_in            (data_in),
+                      .control_unit_out   (data_out)
     );
 
     /////////////////////////////////////////////////////////
