@@ -1,5 +1,5 @@
 $date
-   Sat Jan 27 14:38:40 2024
+   Sat Jan 27 14:56:02 2024
 $end
 $version
   2018.2
@@ -4123,28 +4123,3 @@ b0xxxxxxxxxxxxxxxxxxxx0 j
 #995000
 0!
 0(
-#1000000
-1!
-1(
-bx -
-b1000000000000000100010100 .
-b1000000000000000100010100 /
-bx 8
-bx A
-b1000000000000000100010000 B
-b0 C
-b1000100 E
-bx F
-b1000000000000000100010000 ^
-bx _
-bx `
-bx a
-bx000000000000 b
-bx c
-bx d
-bx e
-bx0 f
-bx0 g
-b0xxxxxxxxxxxxxxxxxxxx h
-b0xxxxxxxxxxx0 i
-b0xxxxxxxxxxxxxxxxxxxx0 j

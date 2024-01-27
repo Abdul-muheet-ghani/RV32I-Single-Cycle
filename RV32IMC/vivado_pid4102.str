@@ -651,3 +651,532 @@ selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 481, 62); // n (o, ck)
 // TclEventType: WAVEFORM_UPDATE_WAVEFORM
 unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (Q, ck)
 // HMemoryUtils.trashcanNow. Engine heap size: 1,341 MB. GUI used memory: 89 MB. Current time: 1/27/24 2:39:12 PM PKT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// Elapsed time: 59 seconds
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "i_control_unit ; unit ; Verilog Module", 4, "i_control_unit", 0, false); // d (O, ck)
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "instruction_mem ; ram ; Verilog Module", 2, "instruction_mem", 0, false); // d (O, ck)
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 15 seconds
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (Q, ck)
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 481, 62); // n (o, ck)Waveform: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 1,342 MB. GUI used memory: 51 MB. Current time: 1/27/24 2:40:32 PM PKT
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (Q, ck)
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "instruction_mem ; ram ; Verilog Module", 2, "instruction_mem", 0, false); // d (O, ck)
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "instruction_mem ; ram ; Verilog Module", 2, "instruction_mem", 0, false, false, false, false, false, true); // d (O, ck) - Double Click
+// TclEventType: SIMULATION_OPEN_SOURCE
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "i_control_decoder ; control ; Verilog Module", 3, "i_control_decoder", 0, false); // d (O, ck)
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "i_control_decoder ; control ; Verilog Module", 3, "i_control_decoder", 0, false, false, false, false, false, true); // d (O, ck) - Double Click
+// TclEventType: SIMULATION_OPEN_SOURCE
+// [GUI Memory]: 99 MB (+88kb) [00:18:35]
+selectCodeEditor("Type_decoder.v", 125, 169); // ce (w, ck)
+// Elapsed time: 29 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, ck)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ck): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (C, c)
+// F (c): Create Source File: addNotify
+selectComboBox(PAResourceAtoD.CreateSrcFileDialog_FILE_TYPE, "Verilog Header", 1); // cl (Q, F)
+// Elapsed time: 17 seconds
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "RV32_pkg"); // X (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+// Tcl Command: 'file mkdir /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/new'
+dismissDialog("Create Source File"); // F (c)
+// Tcl Message: file mkdir /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/new 
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 35 seconds
+dismissDialog("Add Sources"); // c (ck)
+// Tcl Message: close [ open /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/new/RV32_pkg.vh w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/new/RV32_pkg.vh 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [Engine Memory]: 1,361 MB (+10813kb) [00:19:49]
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,382 MB. GUI used memory: 47 MB. Current time: 1/27/24 2:42:04 PM PKT
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 418 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, PC (PC.v)]", 11, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mux2_4 (mux2_4.v)]", 14, false, true, false, false, false, false); // B (D, ck) - Shift Key
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (ck): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (ck)
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/single_cycle/rtl/PC.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/PC.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/mux1_2.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/mux2_4.v] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  {/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/single_cycle/rtl/PC.v /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/PC.v /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/mux1_2.v /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/mux2_4.v} 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 10 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Non-module Files]", 14); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Non-module Files, RV32_pkg.vh]", 15, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Non-module Files, RV32_pkg.vh]", 15, false, false, false, false, false, true); // B (D, ck) - Double Click
+// Elapsed time: 14 seconds
+typeControlKey((HResource) null, "RV32_pkg.vh", 'v'); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [Engine Memory]: 1,431 MB (+2021kb) [00:27:22]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,431 MB. GUI used memory: 48 MB. Current time: 1/27/24 2:49:34 PM PKT
+selectCodeEditor("RV32_pkg.vh", 137, 34); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 1,453 MB. GUI used memory: 48 MB. Current time: 1/27/24 2:49:59 PM PKT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 91 seconds
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (Q, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Type_decoder.v", 6); // k (j, ck)
+selectCodeEditor("Type_decoder.v", 585, 155); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 1,480 MB. GUI used memory: 47 MB. Current time: 1/27/24 2:51:49 PM PKT
+// Elapsed time: 40 seconds
+selectCodeEditor("Type_decoder.v", 318, 266); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32_pkg.vh", 7); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Type_decoder.v", 6); // k (j, ck)
+selectCodeEditor("Type_decoder.v", 109, 292); // ce (w, ck)
+selectCodeEditor("Type_decoder.v", 109, 292, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "Type_decoder.v", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32_pkg.vh", 7); // k (j, ck)
+selectCodeEditor("RV32_pkg.vh", 514, 181); // ce (w, ck)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "b0110011"); // l (aQ, ck)
+selectCodeEditor("RV32_pkg.vh", 101, 2); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 101, 2, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "RV32_pkg.vh", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Type_decoder.v", 6); // k (j, ck)
+selectCodeEditor("Type_decoder.v", 132, 294); // ce (w, ck)
+typeControlKey((HResource) null, "Type_decoder.v", 'v'); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("Type_decoder.v", 100, 302); // ce (w, ck)
+selectCodeEditor("Type_decoder.v", 100, 302, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "Type_decoder.v", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32_pkg.vh", 7); // k (j, ck)
+selectCodeEditor("RV32_pkg.vh", 533, 177); // ce (w, ck)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "b0010011"); // l (aQ, ck)
+selectCodeEditor("RV32_pkg.vh", 89, 23); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 89, 23, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "RV32_pkg.vh", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Type_decoder.v", 6); // k (j, ck)
+typeControlKey((HResource) null, "Type_decoder.v", 'v'); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [Engine Memory]: 1,512 MB (+9800kb) [00:30:33]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32_pkg.vh", 7); // k (j, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,512 MB. GUI used memory: 47 MB. Current time: 1/27/24 2:52:44 PM PKT
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Type_decoder.v", 6); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32_pkg.vh", 7); // k (j, ck)
+selectCodeEditor("RV32_pkg.vh", 203, 36); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 203, 36, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("RV32_pkg.vh", 119, 34); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 119, 34, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "RV32_pkg.vh", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Type_decoder.v", 6); // k (j, ck)
+selectCodeEditor("Type_decoder.v", 130, 326); // ce (w, ck)
+typeControlKey((HResource) null, "Type_decoder.v", 'v'); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("Type_decoder.v", 156, 323); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 1,544 MB. GUI used memory: 47 MB. Current time: 1/27/24 2:53:14 PM PKT
+// Elapsed time: 25 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32_pkg.vh", 7); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Type_decoder.v", 6); // k (j, ck)
+selectCodeEditor("Type_decoder.v", 115, 343); // ce (w, ck)
+selectCodeEditor("Type_decoder.v", 115, 343, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "Type_decoder.v", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32_pkg.vh", 7); // k (j, ck)
+selectCodeEditor("RV32_pkg.vh", 574, 158); // ce (w, ck)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "b0100011"); // l (aQ, ck)
+selectCodeEditor("RV32_pkg.vh", 96, 55); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 96, 55, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "RV32_pkg.vh", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Type_decoder.v", 6); // k (j, ck)
+typeControlKey((HResource) null, "Type_decoder.v", 'v'); // ce (w, ck)
+selectCodeEditor("Type_decoder.v", 108, 355); // ce (w, ck)
+selectCodeEditor("Type_decoder.v", 108, 355, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "Type_decoder.v", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32_pkg.vh", 7); // k (j, ck)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "b1100011"); // l (aQ, ck)
+selectCodeEditor("RV32_pkg.vh", 107, 66); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 107, 66, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "RV32_pkg.vh", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Type_decoder.v", 6); // k (j, ck)
+typeControlKey((HResource) null, "Type_decoder.v", 'v'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32_pkg.vh", 7); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Type_decoder.v", 6); // k (j, ck)
+selectCodeEditor("Type_decoder.v", 108, 370); // ce (w, ck)
+selectCodeEditor("Type_decoder.v", 108, 370, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "Type_decoder.v", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32_pkg.vh", 7); // k (j, ck)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "b1101111"); // l (aQ, ck)
+selectCodeEditor("RV32_pkg.vh", 93, 83); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 93, 83, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "RV32_pkg.vh", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Type_decoder.v", 6); // k (j, ck)
+typeControlKey((HResource) null, "Type_decoder.v", 'v'); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("Type_decoder.v", 97, 383); // ce (w, ck)
+selectCodeEditor("Type_decoder.v", 97, 383, false, false, false, false, true); // ce (w, ck) - Double Click
+// TclEventType: DG_GRAPH_GENERATED
+typeControlKey((HResource) null, "Type_decoder.v", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32_pkg.vh", 7); // k (j, ck)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "b1100111"); // l (aQ, ck)
+selectCodeEditor("RV32_pkg.vh", 90, 98); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 90, 98, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "RV32_pkg.vh", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Type_decoder.v", 6); // k (j, ck)
+typeControlKey((HResource) null, "Type_decoder.v", 'v'); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("Type_decoder.v", 121, 396); // ce (w, ck)
+selectCodeEditor("Type_decoder.v", 121, 396, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "Type_decoder.v", 'c'); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32_pkg.vh", 7); // k (j, ck)
+selectCodeEditor("RV32_pkg.vh", 689, 50); // ce (w, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,577 MB. GUI used memory: 47 MB. Current time: 1/27/24 2:54:59 PM PKT
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "b0110111"); // l (aQ, ck)
+selectCodeEditor("RV32_pkg.vh", 92, 117); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 92, 117, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "RV32_pkg.vh", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Type_decoder.v", 6); // k (j, ck)
+typeControlKey((HResource) null, "Type_decoder.v", 'v'); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32_pkg.vh", 7); // k (j, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [Engine Memory]: 1,593 MB (+6266kb) [00:33:01]
+selectCodeEditor("RV32_pkg.vh", 83, 127); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 83, 127, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "RV32_pkg.vh", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Type_decoder.v", 6); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32_pkg.vh", 7); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Type_decoder.v", 6); // k (j, ck)
+selectCodeEditor("Type_decoder.v", 89, 412); // ce (w, ck)
+selectCodeEditor("Type_decoder.v", 89, 412, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "Type_decoder.v", 'v'); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 1,609 MB. GUI used memory: 47 MB. Current time: 1/27/24 2:55:44 PM PKT
+// Elapsed time: 19 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, ck)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: WAVEFORM_CLOSE_WCFG
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+// e (ck):  Run Simulation : addNotify
+selectButton("PAResourceQtoS.SimulationRun_SIMULATION_ALREADY_RUNNING_DO_YOU_Yes", "Yes"); // JButton (A, G)
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+// Tcl Message: close_sim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 6734.156 ; gain = 0.000 ; free physical = 5029 ; free virtual = 24646 
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: xvlog --incr --relax -prj top_tb_vlog.prj 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "top_tb_behav -key {Behavioral:sim_1:Functional:top_tb} -tclbatch {top_tb.tcl} -view {/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sim_1/imports/muheet-ghani/RV32IMZ-Muheet/memo_tb_behav.wcfg} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2018.2 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// Waveform: addNotify
+// Waveform: addNotify
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// HMemoryUtils.trashcanNow. Engine heap size: 1,598 MB. GUI used memory: 51 MB. Current time: 1/27/24 2:56:02 PM PKT
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: open_wave_config /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sim_1/imports/muheet-ghani/RV32IMZ-Muheet/memo_tb_behav.wcfg 
+// Tcl Message: source top_tb.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 1000ns 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'top_tb_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 6734.156 ; gain = 0.000 ; free physical = 5018 ; free virtual = 24630 
+// 'd' command handler elapsed time: 14 seconds
+dismissDialog("Run Simulation"); // e (ck)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (Q, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,598 MB. GUI used memory: 104 MB. Current time: 1/27/24 2:56:07 PM PKT
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32_pkg.vh", 6); // k (j, ck)
+selectCodeEditor("RV32_pkg.vh", 506, 86); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 247, 131); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 1,638 MB. GUI used memory: 51 MB. Current time: 1/27/24 2:58:24 PM PKT
+// Elapsed time: 133 seconds
+selectCodeEditor("RV32_pkg.vh", 305, 14); // ce (w, ck)
+typeControlKey((HResource) null, "RV32_pkg.vh", 'v'); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
