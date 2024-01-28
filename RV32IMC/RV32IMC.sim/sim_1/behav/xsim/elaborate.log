@@ -5,19 +5,18 @@ Using 8 slave threads.
 Starting static elaboration
 WARNING: [VRFC 10-278] actual bit length 15 differs from formal bit length 32 for port control_unit_out [/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sim_1/imports/muheet-ghani/RV32I-Single-Cycle/Verilog/single_cycle/top_tb.v:33]
 WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 15 for port control_unit_out [/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/top.v:104]
-WARNING: [VRFC 10-278] actual bit length 3 differs from formal bit length 1 for port function_3_in [/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/top.v:118]
-WARNING: [VRFC 10-1783] select index 12 into az is out of bounds [/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/imm.v:21]
+WARNING: [VRFC 10-1783] select index 12 into SB_type is out of bounds [/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/imm.v:31]
 Completed static elaboration
 Starting simulation data flow analysis
 WARNING: [XSIM 43-4099] "/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/top.v" Line 13. Module RV32I_top doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/instruction_memo.v" Line 13. Module ram doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/Type_decoder.v" Line 15. Module control doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/control_unit.v" Line 1. Module unit doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/alu.v" Line 1. Module ALU doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/branch.v" Line 1. Module branch doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/data.v" Line 1. Module data_mem doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/register_file.v" Line 1. Module reg_file doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/imm.v" Line 1. Module immediate doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/control_unit.v" Line 15. Module unit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/alu.v" Line 13. Module ALU doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/branch.v" Line 15. Module branch doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/data.v" Line 13. Module data_mem doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/register_file.v" Line 15. Module reg_file doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/imm.v" Line 13. Module immediate doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.ram

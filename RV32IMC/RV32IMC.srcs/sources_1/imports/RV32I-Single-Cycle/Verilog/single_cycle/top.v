@@ -40,7 +40,7 @@ module RV32I_top #(parameter XLEN = 32)
    wire [XLEN-1:0] ALU_OUTPUT;
    wire [XLEN-1:0] write_adder;
    wire [XLEN-1:0] write_back;
-   wire [8:0]      contrl_decoder;
+   wire [9:0]      contrl_decoder;
    wire [4:0]      rd ;          //destination register
    wire            branch_p;
    reg [XLEN-1:0]  wb,address_q;
@@ -95,7 +95,7 @@ module RV32I_top #(parameter XLEN = 32)
                      ); 
 
    control i_control_decoder(.opcode_in  (inst_out),
-                           .decoded_out(contrl_decoder)
+                             .decoded_out(contrl_decoder)
                            );
 
    unit i_control_unit(.type_decode_in  (contrl_decoder),
@@ -150,6 +150,35 @@ module RV32I_top #(parameter XLEN = 32)
                        .UJ_type_imm_out   (UJ_type),
                        .U_type_imm_out    (U_type)
                        );
+                       
+   CSR i_MCSR(.clk(clk),
+              .reset(reset),
+
+              .external_int_in(),
+              .software_int_in(),
+              .timer_int_in(),
+
+              .illegal_instruction_in(),
+              .ecall_in(),
+              .ebreak_in(),
+              .mret_in(),
+
+              .opcode_in(),
+              .alu_out(),
+
+              .funct3_in(),
+              .instruction_in(),
+              .imm_in(),
+              .rs1_in(),
+              .csr_data_out(),
+
+              .pc_in(),
+              .return_address_out(),
+              .trap_address_out(),
+              .trap_true_out(),
+              .return_trap_out(),
+              .minstret_inc_in()
+              );
 
    /////////////////////////////////////////////////////////
    //always block

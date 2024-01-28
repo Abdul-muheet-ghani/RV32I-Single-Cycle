@@ -43,3 +43,22 @@ close_sim
 launch_simulation
 open_wave_config /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sim_1/imports/muheet-ghani/RV32IMZ-Muheet/memo_tb_behav.wcfg
 source top_tb.tcl
+close_sim
+launch_simulation
+open_wave_config /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sim_1/imports/muheet-ghani/RV32IMZ-Muheet/memo_tb_behav.wcfg
+source top_tb.tcl
+close_sim
+launch_simulation
+open_wave_config /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sim_1/imports/muheet-ghani/RV32IMZ-Muheet/memo_tb_behav.wcfg
+source top_tb.tcl
+save_wave_config {/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sim_1/imports/muheet-ghani/RV32IMZ-Muheet/memo_tb_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sim_1/imports/muheet-ghani/RV32IMZ-Muheet/memo_tb_behav.wcfg
+source top_tb.tcl
+add_files -norecurse /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/CSR.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1

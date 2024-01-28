@@ -1,18 +1,28 @@
+//////////////////////////////////////////////////////////////////////////////////
+// Company: MERL-UITU
+// Engineer: Abdul Muheet Ghani
+// 
+// Design Name: RV32IMACZicsr for Linux
+// Module Name: Control Unit
+// Project Name: RV32IMACZicsr for linux
+// Target Devices: 
+// Description: 
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+`include "RV32_pkg.vh"
+
 module reg_file (
-   rs1_address_in,
-   rs2_address_in,
-   destination_register_in,
-   input_data_in,
-   rs1_data_out,
-   rs2_data_out,
-   clk_in,
-   reset_in
+   input              clk_in,
+   input              reset_in,
+   input       [4:0]  rs1_address_in,
+   input       [4:0]  rs2_address_in,
+   input       [4:0]  destination_register_in,
+   input       [31:0] input_data_in,
+   output wire [31:0] rs1_data_out,
+   output wire [31:0] rs2_data_out
  );
 
- input clk_in,reset_in;
- input [4:0]rs1_address_in,rs2_address_in,destination_register_in;
- input [31:0]input_data_in;
- output wire [31:0]rs1_data_out,rs2_data_out;
  integer i;
  
  reg [31:0] reg_file1[31:0];

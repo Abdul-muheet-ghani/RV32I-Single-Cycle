@@ -1,22 +1,34 @@
+//////////////////////////////////////////////////////////////////////////////////
+// Company: MERL-UITU
+// Engineer: Abdul Muheet Ghani
+// 
+// Design Name: RV32IMACZicsr for Linux
+// Module Name: Branch
+// Project Name: RV32IMACZicsr for linux
+// Target Devices: 
+// Description: 
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+`include "RV32_pkg.vh"
+
 module branch (
-   operand1_in,operand2_in,function_3_in,branch_en_in,branch_taken_out
+   input [31:0] operand1_in,
+   input [31:0] operand2_in,
+   input [2:0]  function_3_in,
+   input        branch_en_in,
+   output reg   branch_taken_out
  );
 
- input [31:0]operand1_in,operand2_in;
- input [2:0]function_3_in;
- input branch_en_in;
- output reg branch_taken_out;
- wire function_3_in;
-
  always @* begin
-    if(branch_en_in==1)begin
+    if(branch_en_in)begin
        case (function_3_in)
-          3'b000 : branch_taken_out = (operand1_in == operand2_in) ? 1 : 0 ;
-          3'b001 : branch_taken_out = (operand1_in != operand2_in) ? 1 : 0 ;
-          3'b100 : branch_taken_out = ($signed (operand1_in) < $signed (operand2_in)) ? 1 : 0 ;
-          3'b101 : branch_taken_out = ($signed (operand1_in) >= $signed (operand2_in)) ? 1 : 0 ;
-          3'b110 : branch_taken_out = (operand1_in < operand2_in) ? 1 : 0 ;
-          3'b111 : branch_taken_out = (operand1_in >= operand2_in) ? 1 : 0 ;
+          `FUNCT3_BEQ  : branch_taken_out = (operand1_in == operand2_in);
+          `FUNCT3_BNEQ : branch_taken_out = (operand1_in != operand2_in);
+          `FUNCT3_BLT  : branch_taken_out = ($signed (operand1_in) < $signed (operand2_in));
+          `FUNCT3_BGE  : branch_taken_out = ($signed (operand1_in) >= $signed (operand2_in));
+          `FUNCT3_BLTU : branch_taken_out = (operand1_in < operand2_in);
+          `FUNCT3_BGEU : branch_taken_out = (operand1_in >= operand2_in);
        endcase
     end
  end

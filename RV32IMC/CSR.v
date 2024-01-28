@@ -1,86 +1,55 @@
+//////////////////////////////////////////////////////////////////////////////////
+// Company: MERL-UITU
+// Engineer: Abdul Muheet Ghani
+// 
+// Design Name: RV32IMACZicsr for Linux
+// Module Name: M-CSR
+// Project Name: RV32IMACZicsr for linux
+// Target Devices: 
+// Description: 
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+`include "RV32_pkg.vh"
+
 module CSR #(
-    parameter XLEN = 32;
+    parameter XLEN = 32
 )
 (
     input wire clk,
     input wire reset,
 
     // Interrupts
-    input wire i_external_int, //interrupt from external source
-    input wire i_software_int, //interrupt from software (inter-processor interrupt)
-    input wire i_timer_int, //interrupt from timer
+    input wire external_int_in, //interrupt from external source
+    input wire software_int_in, //interrupt from software (inter-processor interrupt)
+    input wire timer_int_in, //interrupt from timer
 
     /// Exceptions ///
-    input wire i_is_inst_illegal, //illegal instruction
-    input wire i_is_ecall, //ecall instruction
-    input wire i_is_ebreak, //ebreak instruction
-    input wire i_is_mret, //mret (return from trap) instruction
+    input wire illegal_instruction_in, //illegal instruction
+    input wire ecall_in, //ecall instruction
+    input wire ebreak_in, //ebreak instruction
+    input wire mret_in, //mret (return from trap) instruction
 
     /// Instruction/Load/Store Misaligned Exception///
-    input wire[`OPCODE_WIDTH-1:0] i_opcode, //opcode types
-    input wire[XLEN-1:0]          i_y, //y value from ALU (address used in load/store/jump/branch)
+    input wire[9:0] opcode_in, //opcode types from type decoder
+    input wire[XLEN-1:0]          alu_out, //y value from ALU (address used in load/store/jump/branch)
 
     /// CSR instruction ///
-    input wire[2:0]      i_funct3, // CSR instruction operation
-    input wire[11:0]     i_csr_index, // immediate value from decoder
-    input wire[XLEN-1:0] i_imm, //unsigned immediate for immediate type of CSR instruction (new value to be stored to CSR)
-    input wire[XLEN-1:0] i_rs1, //Source register 1 value (new value to be stored to CSR)
-    output reg[XLEN-1:0] o_csr_out, //CSR value to be loaded to basereg
+    input wire[2:0]      funct3_in, // CSR instruction operation
+    input wire[11:0]     instruction_in, // 12 MSB for CSR index Table 2.5: Currently allocated RISC-V machine-level CSR addresses Volume II
+    input wire[XLEN-1:0] imm_in, //unsigned immediate for immediate type of CSR instruction (new value to be stored to CSR)
+    input wire[XLEN-1:0] rs1_in, //Source register 1 value (new value to be stored to CSR)
+    output reg[XLEN-1:0] csr_data_out, //CSR value to be loaded to basereg
 
     // Trap-Handler 
-    input  wire[XLEN-1:0] i_pc, //Program Counter 
-    input  wire           writeback_change_pc, //high if writeback will issue change_pc (which will override this stage)
-    output reg[XLEN-1:0]  o_return_address, //mepc CSR
-    output reg[XLEN-1:0]  o_trap_address, //mtvec CSR
-    output reg            o_go_to_trap_q, //high before going to trap (if exception/interrupt detected)
-    output reg            o_return_from_trap_q, //high before returning from trap (via mret)
-    input  wire           i_minstret_inc //increment minstret after executing an instruction
+    input  wire[XLEN-1:0] pc_in, //Program Counter 
+    output reg[XLEN-1:0]  return_address_out, //mepc CSR
+    output reg[XLEN-1:0]  trap_address_out, //mtvec CSR
+    output reg            trap_true_out, //high before going to trap (if exception/interrupt detected)
+    output reg            return_trap_out, //high before returning from trap (via mret)
+    input  wire           minstret_inc_in //increment minstret after executing an instruction
 );
 
-               //CSR operation type
-    localparam CSRRW = 3'b001,
-               CSRRS = 3'b010,
-               CSRRC = 3'b011,
-               CSRRWI = 3'b101,
-               CSRRSI = 3'b110,
-               CSRRCI = 3'b111;
-               
-               //CSR addresses
-               //machine info
-    localparam MVENDORID = 12'hF11,  
-               MARCHID = 12'hF12,
-               MIMPID = 12'hF13,
-               MHARTID = 12'hF14,
-               //machine trap setup
-               MSTATUS = 12'h300, 
-               MISA = 12'h301,
-               MIE = 12'h304,
-               MTVEC = 12'h305,
-               //machine trap handling
-               MSCRATCH = 12'h340, 
-               MEPC = 12'h341,
-               MCAUSE = 12'h342,
-               MTVAL = 12'h343,
-               MIP = 12'h344,
-               //machine counters/timers
-               MCYCLE = 12'hB00,
-               MCYCLEH = 12'hB80,
-               //TIME = 12'hC01,
-               //TIMEH = 12'hC81,
-               MINSTRET = 12'hB02,
-               MINSTRETH = 12'hBB2,
-               MCOUNTINHIBIT = 12'h320;
-                
-               //mcause codes
-    localparam MACHINE_SOFTWARE_INTERRUPT =3,
-               MACHINE_TIMER_INTERRUPT = 7,
-               MACHINE_EXTERNAL_INTERRUPT = 11,
-               INSTRUCTION_ADDRESS_MISALIGNED = 0,
-               ILLEGAL_INSTRUCTION = 2,
-               EBREAK = 3,
-               LOAD_ADDRESS_MISALIGNED = 4,
-               STORE_ADDRESS_MISALIGNED = 6,
-               ECALL = 11;
 
     //Machine mode info reg
     //read-only register
@@ -115,35 +84,220 @@ module CSR #(
     reg [XLEN-1:0] minstreth;
     reg [XLEN-1:0] mcountinhibit;
 
+    wire csr_en;
+
+    assign csr_en = opcode_in && (funct3_in != 3'b0);
+
     always @(posedge clk or negedge reset)
     begin
         if(reset)
         begin
-            mvendorid <= '0;
-            marchid   <= '0;
-            mipid     <= '0;
-            mhartid   <= '0;
+            mvendorid <= 'b0;
+            marchid   <= 'b0;
+            mipid     <= 'b0;
+            mhartid   <= 'b0;
 
-            mstatus   <= '0;
-            misa      <= '0;
-            mie       <= '0;
-            mstatus   <= '0;
+            mstatus   <= 'b0;
+            misa      <= 'b0;
+            mie       <= 'b0;
+            mtvec     <= `TRAP_ADRESS;
+            mstatus   <= 'b0;
 
-            mscratch  <= '0;
-            mepc      <= '0;
-            mcause    <= '0;
-            mtval     <= '0;
-            mip       <= '0;
+            mscratch  <= 'b0;
+            mepc      <= 'b0;
+            mcause    <= 'b0;
+            mtval     <= 'b0;
+            mip       <= 'b0;
 
-            mcycle    <= '0;
-            mcycleh   <= '0;
-            minstret  <= '0;
-            minstreth <= '0;
-            mcountinhibit <= '0;
+            mcycle    <= 'b0;
+            mcycleh   <= 'b0;
+            minstret  <= 'b0;
+            minstreth <= 'b0;
+            mcountinhibit <= 'b0;
         end
         else begin
-            case(i_csr_index)
+            if(csr_en)
+            begin
+                if(instruction_in == `MSTATUS)
+                begin
+                    mstatus <= csr_data;
+                end
+                else begin
+                    /*When a trap is taken from privilege mode y into privilege mode x,xPIE is set to the value of x IE;
+                    x IE is set to 0; and xPP is set to y.*/
+                    // Volume II pg.21
+                    if(trap_true_out)
+                    begin
+                        mstatus[3] <= 1'b0; // mie bit, for not allowed to nested
+                        mstatus[7] <= mstatus[3]; // mpie 
+                        mstatus[12:11] <= 2'b11; //MPP, machine previous privilage value stored.
+                    end
+                    //MRET When executing an xRET instruction, supposing xPP holds the value y, xIE is set to xPIE;
+                    //xPIE is set to 1;
+                    //Volume II pg.21
+                    else if(return_trap_out)
+                    begin
+                        mstatus[3] <= mstatus[7]; // mie bit, for not allowed to nested
+                        mstatus[7] <= 1'b1; // mpie 
+                        mstatus[12:11] <= 2'b11; //MPP, machine previous privilage value stored.
+                    end
+                end
+
+                if(instruction_in == `MIE)begin
+                    mie <= csr_data;
+                end
+
+                if(instruction_in == `MTVEC)
+                begin
+                    mtvec <= csr_data;
+                end
+
+                if(instruction_in == `MSCRATCH)
+                begin
+                    mscratch <= csr_data;
+                end
+
+                if(instruction_in == `MEPC)
+                begin
+                    mepc <= {csr_data[31:2],2'b0};
+                end
+
+                if(instruction_in == `MCAUSE)
+                begin
+                    mcause <= csr_data;
+                end
+
+                if(instruction_in == `MTVAL)
+                begin
+                    mtval <= csr_data;
+                end
+
+                if(instruction_in == `MCYCLE)
+                begin
+                    mcycle <= csr_data;
+                end
+
+                if(instruction_in == `MCYCLEH)
+                begin
+                    mcycleh <= csr_data;
+                end
+
+                if(instruction_in == `MINSTRET)
+                begin
+                    minstret <= csr_data;
+                end
+
+                if(instruction_in == `MINSTRETH)
+                begin
+                    minstreth <= csr_data;
+                end
+
+                if(instruction_in == `MCOUNTINHIBIT)
+                begin
+                    mcountinhibit <= csr_data;
+                end
+
+                if(trap_true_out) begin
+                    mepc <= pc_in;
+                end
+
+                //mcause[3:0] = code, mcause[31] = intbit. 
+                //Volume II pg.38. Interrupts priority first then synchronous traps
+                if(trap_true_out)
+                begin
+                    if(external_interrupt_in) begin
+                        mcause[3:0] <= `MACHINE_EXTERNAL_INTERRUPT;
+                        mcause[31]  <= 1'b1;
+                    end
+                    else if(software_interrupt_in) begin
+                        mcause[3:0] <= `MACHINE_SOFTWARE_INTERRUPT;
+                        mcause[31]  <= 1'b1;
+                    end
+                    else if(timer_interrupt_in) begin
+                        mcause[3:0] <= `MACHINE_TIMER_INTERRUPT;
+                        mcause[31]  <= 1'b1;
+                    end
+                    else if(illegal_instruction_in) begin
+                        mcause[3:0] <= `ILLEGAL_INSTRUCTION;
+                        mcause[31]  <= 1'b0;
+                    end
+                    else if(ecall_in) begin
+                        mcause[3:0] <= `ECALL;
+                        mcause[31]  <= 1'b0;
+                    end
+                    else if(ebreak_in) begin
+                        mcause[3:0] <= `EBREAK;
+                        mcause[31]  <= 1'b0;
+                    end
+                end
+
+                mcycle <= mcountinhibit[0] ? mcycle : mcycle + 1;
+
+                mip[3] <= software_interrupt_in;
+                mip[7] <= timer_interrupt_in;
+                mip[11]<= external_interrupt_in;
+
+                return_address_out <= mepc;
+
+                /* Volume 2 pg. 30: When MODE=Direct (0), all traps into machine mode cause the i_pc to be set to the address in the  
+                 BASE field. When MODE=Vectored (1), all synchronous exceptions into machine mode cause the i_pc to be set to the address 
+                 in the BASE field, whereas interrupts cause the i_pc to be set to the address in the BASE field plus four times the
+                 interrupt cause number */
+                 if(mtvec[1] && is_interrupt) trap_address_out <= {mtvec,2'b00} + {28'b0,mcause_code<<2};
+                 else trap_address_out <= {mtvec,2'b00};
+            end
+        end
+    end
+
+    always @(*)
+    begin
+        external_interrut_pending   = mstatus[3] && mie[11] && mip[11];
+        timer_interrut_pending      = mstatus[3] && mie[7]  && mip[7];
+        software_interrut_pending   = mstatus[3] && mie[3]  && mip[3];
+
+        is_interrupt = external_interrut_pending || timer_interrut_pending || software_interrut_pending;
+        is_exception = ecall_in || ebreak_in || illegal_instruction_in;
+
+        trap_true_out = is_interrupt || is_exception;
+        return_trap_out = mret_in;
+    end
+
+    always @(*)
+    begin
+        if(csr_en)
+        begin
+            case(instruction_in)
+                `MVENDORID  : csr_data_out = mvendorid;
+                `MARCHID    : csr_data_out = marchid;
+                `MIMPID     : csr_data_out = mipid;
+                `MHARTID    : csr_data_out = mhartid;
+
+                `MSTATUS    : csr_data_out = mstatus; 
+                `MISA       : csr_data_out = misa;
+                `MIE        : csr_data_out = mie;
+                `MTVEC      : csr_data_out = mstatus;
                 
+                `MSCRATCH   : csr_data_out = mscratch;   
+                `MEPC       : csr_data_out = mepc;  
+                `MCAUSE     : csr_data_out = mcause;  
+                `MTVAL      : csr_data_out = mtval;  
+                `MIP        : csr_data_out = mip;  
+                
+                `MCYCLE     : csr_data_out = mcycle
+                `MCYCLEH    : csr_data_out = mcycleh
+                `MINSTRET   : csr_data_out = minstret
+                `MINSTRETH  : csr_data_out = minstreth
+                `MCOUNTINHIBIT : csr_data_out = mcountinhibit;
+            endcase
+
+            case(funct3_in)
+                `CSRRW  : csr_data = rs1_in;  //Read and Write.
+                `CSRRS  : csr_data = csr_data_out | rs1_in;
+                `CSRRC  : csr_data = csr_data_out & (~rs1_in);
+                `CSRRWI : csr_data = csr_immediate_in;
+                `CSRRSI : csr_data = csr_data_out | csr_immediate_in;
+                `CSRRCI : csr_data = csr_data_out | (~csr_immediate_in);
             endcase
         end
     end
+endmodule
