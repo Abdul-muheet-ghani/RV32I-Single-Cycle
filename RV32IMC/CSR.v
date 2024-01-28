@@ -31,8 +31,8 @@ module CSR #(
     input wire mret_in, //mret (return from trap) instruction
 
     /// Instruction/Load/Store Misaligned Exception///
-    input wire[9:0] opcode_in, //opcode types from type decoder
-    input wire[XLEN-1:0]          alu_out, //y value from ALU (address used in load/store/jump/branch)
+    input wire[6:0] opcode_in, //opcode types from type decoder
+    //input wire[XLEN-1:0]          alu_out, //y value from ALU (address used in load/store/jump/branch)
 
     /// CSR instruction ///
     input wire[2:0]      funct3_in, // CSR instruction operation
@@ -86,7 +86,7 @@ module CSR #(
 
     wire csr_en;
 
-    assign csr_en = opcode_in && (funct3_in != 3'b0);
+    assign csr_en = (opcode_in == `OPCODE_SYSTEM) && (funct3_in != 3'b0);
 
     always @(posedge clk or negedge reset)
     begin

@@ -43,8 +43,22 @@ module RV32I_top #(parameter XLEN = 32)
    wire [9:0]      contrl_decoder;
    wire [4:0]      rd ;          //destination register
    wire            branch_p;
-   reg [XLEN-1:0]  wb,address_q;
+   reg [XLEN-1:0]  wb,address_q,csr_data_out;
    reg [1:0]       next_pc=0;
+
+   wire            external_int_in;
+   wire            software_int_in;
+   wire            timer_int_in;
+
+   wire            illegal_instruction_in;
+   wire            ecall_in;
+   wire            ebreak_in;
+   wire            mret_in;
+
+   wire [31:0]     return_address;
+   wire [31:0]     trap_address;
+   wire            trap_true;
+   wire            return_trap;
 
    /////////////////////////////////////////////////////////
    //procedural assignment
@@ -94,14 +108,18 @@ module RV32I_top #(parameter XLEN = 32)
                        .we_in           (we)
                      ); 
 
-   control i_control_decoder(.opcode_in  (inst_out),
-                             .decoded_out(contrl_decoder)
+   control i_control_decoder(.opcode_in      (inst_out),
+                             .illegal_ins_out(illegal_instruction_in),
+                             .ecall_out      (ecall_in),
+                             .ebreak_out     (ebreak_in),
+                             .mret_out       (mret_in),
+                             .decoded_out    (contrl_decoder)
                            );
 
-   unit i_control_unit(.type_decode_in  (contrl_decoder),
-                     .function_3_in   (inst_out[14:12]),
-                     .function_7_in   (inst_out[30]),
-                     .control_unit_out(control_unit_out)
+   unit i_control_unit(.type_decode_in (contrl_decoder),
+                     .function_3_in    (inst_out[14:12]),
+                     .function_7_in    (inst_out[30]),
+                     .control_unit_out (control_unit_out)
                      );
 
    // Output of control unit 5:2 is ALU operand for selecting operation (i.e +,-,or,xor etc)
@@ -151,33 +169,33 @@ module RV32I_top #(parameter XLEN = 32)
                        .U_type_imm_out    (U_type)
                        );
                        
-   CSR i_MCSR(.clk(clk),
+   CSR i_MCSR(.clk  (clk),
               .reset(reset),
 
-              .external_int_in(),
-              .software_int_in(),
-              .timer_int_in(),
+              .external_int_in(external_int_in),
+              .software_int_in(software_int_in),
+              .timer_int_in   (timer_int_in),
 
-              .illegal_instruction_in(),
-              .ecall_in(),
-              .ebreak_in(),
-              .mret_in(),
+              .illegal_instruction_in (illegal_instruction_in),
+              .ecall_in               (ecall_in),
+              .ebreak_in              (ebreak_in),
+              .mret_in                (mret_in),
 
-              .opcode_in(),
-              .alu_out(),
+              .opcode_in(inst_out[6:0]),
+              //.alu_out(),
 
-              .funct3_in(),
-              .instruction_in(),
-              .imm_in(),
-              .rs1_in(),
-              .csr_data_out(),
+              .funct3_in      (inst_out[14:12]),
+              .instruction_in (inst_out[20:31]),
+              .imm_in         ({27'b0,inst_out[19:15]}),
+              .rs1_in         (operand1),
+              .csr_data_out   (csr_data_out),
 
-              .pc_in(),
-              .return_address_out(),
-              .trap_address_out(),
-              .trap_true_out(),
-              .return_trap_out(),
-              .minstret_inc_in()
+              .pc_in             ({21'b0,address_q[13:2]}),
+              .return_address_out(return_address),
+              .trap_address_out  (trap_address),
+              .trap_true_out     (trap_true),
+              .return_trap_out   (return_trap),
+              .minstret_inc_in   ()
               );
 
    /////////////////////////////////////////////////////////
@@ -201,7 +219,13 @@ module RV32I_top #(parameter XLEN = 32)
       if (contrl_decoder[3]) begin
          wb = address_q + 4;
       end else begin
-         wb = write_back;
+         if(contrl_decoder == 1)
+         begin
+            wb = csr_data_out;
+         end
+         else begin
+            wb = write_back;
+         end
       end
    end 
 
