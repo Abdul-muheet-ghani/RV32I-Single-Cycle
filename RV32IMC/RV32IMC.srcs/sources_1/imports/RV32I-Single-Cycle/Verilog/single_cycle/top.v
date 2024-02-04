@@ -57,6 +57,7 @@ module RV32I_top #(parameter XLEN = 32)
 
    wire [31:0]     return_address;
    wire [31:0]     trap_address;
+   wire [31:0]     PC;
    wire            trap_true;
    wire            return_trap;
 
@@ -69,6 +70,9 @@ module RV32I_top #(parameter XLEN = 32)
                  (next_pc == 2'b01) ? UJ_type :
                  (next_pc == 2'b10) ? OUT_T :
                  (next_pc == 2'b11) ? I_type + reg_1 : 0;
+
+   assign PC   = (trap_true) ? trap_address : (return_trap)
+                             ? return_address : addr;
 
    // output of control unit 10:9 is for operand a selection
    assign reg_1 = (control_unit_out[10:9] == 2'b00) ? operand1 :
@@ -208,7 +212,7 @@ module RV32I_top #(parameter XLEN = 32)
          address_q = 32'b0;
       end
       else begin
-         address_q = addr;
+         address_q = PC;
       end
    end
 

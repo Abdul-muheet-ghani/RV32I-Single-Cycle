@@ -2521,3 +2521,13 @@ selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation S
 // HMemoryUtils.trashcanNow. Engine heap size: 4,415 MB. GUI used memory: 66 MB. Current time: 1/28/24 10:55:07 PM PKT
 // TclEventType: DG_GRAPH_STALE
 // TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 4,431 MB. GUI used memory: 109 MB. Current time: 1/30/24 9:10:39 AM PKT
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 507ms to process. Increasing delay to 3000 ms.
+// WARNING: HTimer (a Update Status Timer) is taking 972ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1482 ms. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 2194 ms. Increasing delay to 3000 ms.
+// WARNING: HTimer (HSTRUtils Dump STR Log Timer) is taking 1678ms to process. Increasing delay to 4000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 4,431 MB. GUI used memory: 92 MB. Current time: 1/30/24 9:40:40 AM PKT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,431 MB. GUI used memory: 65 MB. Current time: 1/30/24 10:10:44 AM PKT
