@@ -51,47 +51,47 @@
 
 //CSR addresses
 //machine info
-`define MVENDORID = 12'hF11,  
-`define MARCHID = 12'hF12,
-`define MIMPID = 12'hF13,
-`define MHARTID = 12'hF14,
+`define MVENDORID   12'hF11  
+`define MARCHID     12'hF12
+`define MIMPID  12'hF13
+`define MHARTID     12'hF14
 
 //machine trap setup
-`define MSTATUS = 12'h300, 
-`define MISA = 12'h301,
-`define MIE = 12'h304,
-`define MTVEC = 12'h305,
+`define MSTATUS     12'h300 
+`define MISA    12'h301
+`define MIE     12'h304
+`define MTVEC   12'h305
 
 //machine trap handling
-`define MSCRATCH = 12'h340, 
-`define MEPC = 12'h341,
-`define MCAUSE = 12'h342,
-`define MTVAL = 12'h343,
-`define MIP = 12'h344,
+`define MSCRATCH    12'h340
+`define MEPC    12'h341
+`define MCAUSE      12'h342
+`define MTVAL   12'h343
+`define MIP     12'h344
 
 //machine counters/timers
-`define MCYCLE = 12'hB00,
-`define MCYCLEH = 12'hB80,
+`define MCYCLE 12'hB00
+`define MCYCLEH 12'hB80
 //TIME = 12'hC01,
 //TIMEH = 12'hC81,
-`define MINSTRET = 12'hB02,
-`define MINSTRETH = 12'hBB2,
-`define MCOUNTINHIBIT = 12'h320;
+`define MINSTRET 12'hB02
+`define MINSTRETH 12'hBB2
+`define MCOUNTINHIBIT 12'h320
 
-`define CSRRW = 3'b001,
-`define CSRRS = 3'b010,
-`define CSRRC = 3'b011,
-`define CSRRWI = 3'b101,
-`define CSRRSI = 3'b110,
-`define CSRRCI = 3'b111;
+`define CSRRW   3'b001
+`define CSRRS   3'b010
+`define CSRRC   3'b011
+`define CSRRWI  3'b101
+`define CSRRSI  3'b110
+`define CSRRCI  3'b111
 
 //Volume II table 3.6
-`define MACHINE_SOFTWARE_INTERRUPT =3,
-`define MACHINE_TIMER_INTERRUPT = 7,
-`define MACHINE_EXTERNAL_INTERRUPT = 11,
-`define INSTRUCTION_ADDRESS_MISALIGNED = 0,
-`define ILLEGAL_INSTRUCTION = 2,
-`define EBREAK = 3,
-`define LOAD_ADDRESS_MISALIGNED = 4,
-`define STORE_ADDRESS_MISALIGNED = 6,
-`define ECALL = 11;
+`define MACHINE_SOFTWARE_INTERRUPT      3
+`define MACHINE_TIMER_INTERRUPT         7
+`define MACHINE_EXTERNAL_INTERRUPT      11
+`define INSTRUCTION_ADDRESS_MISALIGNED      0
+`define ILLEGAL_INSTRUCTION         2
+`define EBREAK      3
+`define LOAD_ADDRESS_MISALIGNED         4
+`define STORE_ADDRESS_MISALIGNED        6
+`define ECALL       11

@@ -43,7 +43,8 @@ module RV32I_top #(parameter XLEN = 32)
    wire [9:0]      contrl_decoder;
    wire [4:0]      rd ;          //destination register
    wire            branch_p;
-   reg [XLEN-1:0]  wb,address_q,csr_data_out;
+   wire [XLEN-1:0] csr_data_out;
+   reg [XLEN-1:0]  wb,address_q;
    reg [1:0]       next_pc=0;
 
    wire            external_int_in;
@@ -189,8 +190,8 @@ module RV32I_top #(parameter XLEN = 32)
               //.alu_out(),
 
               .funct3_in      (inst_out[14:12]),
-              .instruction_in (inst_out[20:31]),
-              .imm_in         ({27'b0,inst_out[19:15]}),
+              .instruction_in (inst_out[31:20]),
+              .csr_immediate_in({27'b0,inst_out[19:15]}),
               .rs1_in         (operand1),
               .csr_data_out   (csr_data_out),
 
