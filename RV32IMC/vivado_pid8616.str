@@ -1,0 +1,604 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:03:12 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 8616
+License: Customer
+
+Current time: 	Sat Feb 17 17:03:35 PKT 2024
+Time zone: 	Pakistan Time (Asia/Karachi)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1475x829
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 6 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	D:/Vivado/2018.2/tps/win64/jre
+Java executable location: 	D:/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	DELL LATITUDE E 5491
+User home directory: C:/Users/DELL LATITUDE E 5491
+User working directory: D:/new p/RV32I-Single-Cycle/RV32IMC
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: D:/Vivado
+HDI_APPROOT: D:/Vivado/2018.2
+RDI_DATADIR: D:/Vivado/2018.2/data
+RDI_BINDIR: D:/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/DELL LATITUDE E 5491/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/DELL LATITUDE E 5491/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/DELL LATITUDE E 5491/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	D:/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	D:/new p/RV32I-Single-Cycle/RV32IMC/vivado.log
+Vivado journal file location: 	D:/new p/RV32I-Single-Cycle/RV32IMC/vivado.jou
+Engine tmp dir: 	D:/new p/RV32I-Single-Cycle/RV32IMC/.Xil/Vivado-8616-DESKTOP-EK90MSV
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: D:/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: D:/Vivado/2018.2
+XILINX_SDK: D:/SDK/2018.2
+XILINX_VIVADO: D:/Vivado/2018.2
+XILINX_VIVADO_HLS: D:/Vivado/2018.2
+
+
+GUI allocated memory:	194 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 518 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 56 MB (+56428kb) [00:00:12]
+// [Engine Memory]: 492 MB (+363915kb) [00:00:12]
+// Opening Vivado Project: D:\new p\RV32I-Single-Cycle\RV32IMC\RV32IMC.xpr. Version: Vivado v2018.2 
+// bx (ck):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project {D:/new p/RV32I-Single-Cycle/RV32IMC/RV32IMC.xpr} 
+// [GUI Memory]: 63 MB (+4020kb) [00:00:13]
+// HMemoryUtils.trashcanNow. Engine heap size: 555 MB. GUI used memory: 33 MB. Current time: 2/17/24 5:03:37 PM PKT
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project {D:/new p/RV32I-Single-Cycle/RV32IMC/RV32IMC.xpr} 
+// Tcl Message: INFO: [Project 1-313] Project file moved from '/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// [Engine Memory]: 555 MB (+40665kb) [00:00:18]
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2018.2/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 586 MB (+3128kb) [00:00:22]
+// Project name: RV32IMC; location: D:/new p/RV32I-Single-Cycle/RV32IMC; part: xc7a100tcsg324-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 848.465 ; gain = 114.043 
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [Engine Memory]: 616 MB (+975kb) [00:00:30]
+// Tcl Message: update_compile_order -fileset sources_1 
+// [Engine Memory]: 660 MB (+13611kb) [00:00:34]
+// HMemoryUtils.trashcanNow. Engine heap size: 660 MB. GUI used memory: 35 MB. Current time: 2/17/24 5:03:57 PM PKT
+// Elapsed time: 77 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 2); // B (D, ck)
+// [GUI Memory]: 70 MB (+3923kb) [00:01:46]
+// PAPropertyPanels.initPanels (CSR.v) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, CSR.v]", 3, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, CSR.v]", 3, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("CSR.v", 201, 200); // ce (w, ck)
+selectCodeEditor("CSR.v", 217, 112); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 75 MB (+1815kb) [00:02:09]
+// Elapsed time: 14 seconds
+selectCodeEditor("CSR.v", 246, 158); // ce (w, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header]", 1); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header, RV32_pkg.vh]", 2, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header, RV32_pkg.vh]", 2, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("RV32_pkg.vh", 229, 133); // ce (w, ck)
+// [GUI Memory]: 82 MB (+3887kb) [00:03:07]
+// Elapsed time: 41 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "TRAP_A"); // l (aQ, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "CSR.v", 1); // k (j, ck)
+selectCodeEditor("CSR.v", 236, 113); // ce (w, ck)
+selectCodeEditor("CSR.v", 236, 113); // ce (w, ck)
+selectCodeEditor("CSR.v", 236, 113, false, false, false, false, true); // ce (w, ck) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [GUI Memory]: 87 MB (+807kb) [00:03:21]
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 48 seconds
+selectCodeEditor("CSR.v", 71, 63); // ce (w, ck)
+// Elapsed time: 24 seconds
+selectCodeEditor("CSR.v", 275, 144); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 11 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "csr_data"); // l (aQ, ck)
+selectCodeEditor("CSR.v", 245, 24); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("CSR.v", 258, 115); // ce (w, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [GUI Memory]: 97 MB (+5320kb) [00:04:47]
+selectCodeEditor("CSR.v", 281, 198); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("CSR.v", 261, 181); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("CSR.v", 267, 115); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("CSR.v", 257, 194); // ce (w, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("CSR.v", 266, 178); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("CSR.v", 273, 161); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("CSR.v", 277, 199); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("CSR.v", 289, 179); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("CSR.v", 314, 213); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 102 MB (+308kb) [00:05:27]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 18 seconds
+selectCodeEditor("CSR.v", 286, 129); // ce (w, ck)
+selectCodeEditor("CSR.v", 286, 129, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 27 seconds
+selectCodeEditor("CSR.v", 148, 106); // ce (w, ck)
+selectCodeEditor("CSR.v", 54, 116); // ce (w, ck)
+typeControlKey((HResource) null, "CSR.v", 'c'); // ce (w, ck)
+selectCodeEditor("CSR.v", 53, 42); // ce (w, ck)
+typeControlKey((HResource) null, "CSR.v", 'v'); // ce (w, ck)
+selectCodeEditor("CSR.v", 129, 166); // ce (w, ck)
+selectCodeEditor("CSR.v", 129, 166, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "CSR.v", 'c'); // ce (w, ck)
+selectCodeEditor("CSR.v", 236, 77); // ce (w, ck)
+typeControlKey((HResource) null, "CSR.v", 'v'); // ce (w, ck)
+selectCodeEditor("CSR.v", 130, 184); // ce (w, ck)
+selectCodeEditor("CSR.v", 130, 184, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "CSR.v", 'c'); // ce (w, ck)
+selectCodeEditor("CSR.v", 396, 75); // ce (w, ck)
+typeControlKey((HResource) null, "CSR.v", 'v'); // ce (w, ck)
+selectCodeEditor("CSR.v", 93, 158); // ce (w, ck)
+selectCodeEditor("CSR.v", 93, 158, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "CSR.v", 'c'); // ce (w, ck)
+selectCodeEditor("CSR.v", 580, 33); // ce (w, ck)
+typeControlKey((HResource) null, "CSR.v", 'v'); // ce (w, ck)
+selectCodeEditor("CSR.v", 128, 175); // ce (w, ck)
+selectCodeEditor("CSR.v", 128, 175, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "CSR.v", 'c'); // ce (w, ck)
+selectCodeEditor("CSR.v", 676, 27); // ce (w, ck)
+typeControlKey((HResource) null, "CSR.v", 'v'); // ce (w, ck)
+selectCodeEditor("CSR.v", 28, 25, true, false, false, false, false); // ce (w, ck) - Shift Key
+// Elapsed time: 11 seconds
+selectCodeEditor("CSR.v", 127, 145); // ce (w, ck)
+typeControlKey((HResource) null, "CSR.v", 'v'); // ce (w, ck)
+selectCodeEditor("CSR.v", 160, 161); // ce (w, ck)
+selectCodeEditor("CSR.v", 220, 181); // ce (w, ck)
+selectCodeEditor("CSR.v", 238, 198); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 18 seconds
+selectCodeEditor("CSR.v", 308, 97); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 22 seconds
+selectCodeEditor("CSR.v", 117, 115); // ce (w, ck)
+// Elapsed time: 17 seconds
+selectCodeEditor("CSR.v", 299, 143); // ce (w, ck)
+// [GUI Memory]: 107 MB (+196kb) [00:08:40]
+// Elapsed time: 25 seconds
+selectCodeEditor("CSR.v", 272, 145); // ce (w, ck)
+selectCodeEditor("CSR.v", 272, 145, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 63 seconds
+selectCodeEditor("CSR.v", 79, 31); // ce (w, ck)
+selectCodeEditor("CSR.v", 79, 31, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 24 seconds
+selectCodeEditor("CSR.v", 156, 149); // ce (w, ck)
+selectCodeEditor("CSR.v", 232, 148); // ce (w, ck)
+// Elapsed time: 18 seconds
+selectCodeEditor("CSR.v", 235, 131); // ce (w, ck)
+selectCodeEditor("CSR.v", 235, 131); // ce (w, ck)
+selectCodeEditor("CSR.v", 220, 141); // ce (w, ck)
+// Elapsed time: 33 seconds
+selectCodeEditor("CSR.v", 71, 74); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 75 seconds
+selectCodeEditor("CSR.v", 44, 72); // ce (w, ck)
+selectCodeEditor("CSR.v", 44, 72, false, false, false, false, true); // ce (w, ck) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 26 seconds
+selectCodeEditor("CSR.v", 186, 130); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 660 MB. GUI used memory: 41 MB. Current time: 2/17/24 5:45:34 PM PKT
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1438 ms. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 1973 ms to process. Increasing delay to 2000 ms.
+// Elapsed time: 1770 seconds
+selectCodeEditor("CSR.v", 445, 52); // ce (w, ck)
+selectCodeEditor("CSR.v", 359, 45); // ce (w, ck)
+// Elapsed time: 18 seconds
+selectCodeEditor("CSR.v", 285, 147); // ce (w, ck)
+selectCodeEditor("CSR.v", 285, 147, false, false, false, false, true); // ce (w, ck) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32_pkg.vh", 2); // k (j, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_top (top.v)]", 5); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_top (top.v), i_control_decoder : control (Type_decoder.v)]", 7, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_top (top.v), i_control_decoder : control (Type_decoder.v)]", 7, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_top (top.v), i_control_unit : unit (control_unit.v)]", 8, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_top (top.v), i_control_unit : unit (control_unit.v)]", 8, false, false, false, false, false, true); // B (D, ck) - Double Click
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_top (top.v), i_ALU : ALU (alu.v)]", 9, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_top (top.v), i_ALU : ALU (alu.v)]", 9, false, false, false, false, false, true); // B (D, ck) - Double Click
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "CSR.v", 1); // k (j, ck)
+selectCodeEditor("CSR.v", 246, 98); // ce (w, ck)
+selectCodeEditor("CSR.v", 160, 95); // ce (w, ck)
+selectCodeEditor("CSR.v", 160, 95, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 20 seconds
+selectCodeEditor("CSR.v", 108, 164); // ce (w, ck)
+selectCodeEditor("CSR.v", 302, 147); // ce (w, ck)
+selectCodeEditor("CSR.v", 302, 147, false, false, false, false, true); // ce (w, ck) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32_pkg.vh", 2); // k (j, ck)
+selectCodeEditor("RV32_pkg.vh", 89, 211); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 89, 211, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("RV32_pkg.vh", 127, 213); // ce (w, ck)
+typeControlKey((HResource) null, "RV32_pkg.vh", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "CSR.v", 1); // k (j, ck)
+typeControlKey((HResource) null, "CSR.v", 'v'); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 10 seconds
+selectCodeEditor("CSR.v", 317, 162); // ce (w, ck)
+selectCodeEditor("CSR.v", 155, 128); // ce (w, ck)
+// Elapsed time: 19 seconds
+selectCodeEditor("CSR.v", 260, 149); // ce (w, ck)
+selectCodeEditor("CSR.v", 309, 149); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 15 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32_pkg.vh", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "CSR.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32_pkg.vh", 2); // k (j, ck)
+selectCodeEditor("RV32_pkg.vh", 2, 213, true, false, false, false, false); // ce (w, ck) - Shift Key
+typeControlKey((HResource) null, "RV32_pkg.vh", 'c'); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "CSR.v", 1); // k (j, ck)
+selectCodeEditor("CSR.v", 160, 74); // ce (w, ck)
+typeControlKey((HResource) null, "CSR.v", 'v'); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 22 seconds
+selectCodeEditor("CSR.v", 267, 111); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 15 seconds
+selectCodeEditor("CSR.v", 190, 193); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 14 seconds
+selectCodeEditor("CSR.v", 186, 194); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 82 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "CSR.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32_pkg.vh", 1); // k (j, ck)
+selectCodeEditor("RV32_pkg.vh", 170, 195); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 15, 211); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 31, 66); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 242, 125); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+typeControlKey((HResource) null, "RV32_pkg.vh", 'v'); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("RV32_pkg.vh", 124, 78); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 124, 78, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 21 seconds
+selectCodeEditor("RV32_pkg.vh", 244, 45); // ce (w, ck)
+// Elapsed time: 18 seconds
+selectCodeEditor("RV32_pkg.vh", 0, 125, true, false, false, false, false); // ce (w, ck) - Shift Key
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "CSR.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32_pkg.vh", 1); // k (j, ck)
+selectCodeEditor("RV32_pkg.vh", 23, 43); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 280, 162, true, false, false, false, false); // ce (w, ck) - Shift Key
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 18 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "CSR.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32_pkg.vh", 1); // k (j, ck)
+selectCodeEditor("RV32_pkg.vh", 250, 182); // ce (w, ck)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// Elapsed time: 10 seconds
+typeControlKey((HResource) null, "RV32_pkg.vh", 'v'); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 77, 75); // ce (w, ck)
+typeControlKey((HResource) null, "RV32_pkg.vh", 'c'); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 105, 94); // ce (w, ck)
+typeControlKey((HResource) null, "RV32_pkg.vh", 'v'); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 104, 112); // ce (w, ck)
+typeControlKey((HResource) null, "RV32_pkg.vh", 'v'); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 104, 129); // ce (w, ck)
+typeControlKey((HResource) null, "RV32_pkg.vh", 'v'); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 106, 145); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 101, 163); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 101, 163, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "RV32_pkg.vh", 'v'); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 80, 179); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 80, 179, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "RV32_pkg.vh", 'v'); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 70, 195); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 70, 195, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "RV32_pkg.vh", 'v'); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 71, 215); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 71, 215, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "RV32_pkg.vh", 'v'); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 71, 231); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 71, 231, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("RV32_pkg.vh", 67, 92); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 67, 92, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "RV32_pkg.vh", 'v'); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 67, 108); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 67, 108, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "RV32_pkg.vh", 'v'); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 68, 127); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 68, 127, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "RV32_pkg.vh", 'v'); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 65, 141); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 65, 141, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "RV32_pkg.vh", 'v'); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 54, 156); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 54, 156, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "RV32_pkg.vh", 'v'); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 51, 76); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 51, 76, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("RV32_pkg.vh", 55, 95); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 55, 95, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "RV32_pkg.vh", 'v'); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 57, 113); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 57, 113, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "RV32_pkg.vh", 'v'); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 58, 123); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 58, 123, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("RV32_pkg.vh", 63, 142); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 63, 142, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("RV32_pkg.vh", 64, 158); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 64, 158, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "RV32_pkg.vh", 'v'); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 61, 178); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 61, 178, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "RV32_pkg.vh", 'v'); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 61, 194); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 61, 194, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "RV32_pkg.vh", 'v'); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("RV32_pkg.vh", 210, 130); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 37 seconds
+selectCodeEditor("RV32_pkg.vh", 90, 146); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 90, 146, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("RV32_pkg.vh", 69, 168); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 69, 168, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("RV32_pkg.vh", 75, 111); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 75, 111, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("RV32_pkg.vh", 138, 231); // ce (w, ck)
+selectCodeEditor("RV32_pkg.vh", 125, 250); // ce (w, ck)
+// Elapsed time: 22 seconds
+selectCodeEditor("RV32_pkg.vh", 125, 125); // ce (w, ck)
+// Elapsed time: 35 seconds
+selectCodeEditor("RV32_pkg.vh", 134, 198); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Elapsed time: 10 seconds
+selectCodeEditor("RV32_pkg.vh", 168, 152); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("RV32_pkg.vh", 171, 163); // ce (w, ck)
+// Elapsed time: 17 seconds
+selectCodeEditor("RV32_pkg.vh", 267, 115); // ce (w, ck)
+// Elapsed time: 16 seconds
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Elapsed time: 21 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "CSR.v", 2); // k (j, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("CSR.v", 239, 45); // ce (w, ck)
+selectCodeEditor("CSR.v", 239, 45, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("CSR.v", 286, 46); // ce (w, ck)
+selectCodeEditor("CSR.v", 322, 114); // ce (w, ck)
+selectCodeEditor("CSR.v", 303, 181); // ce (w, ck)
+selectCodeEditor("CSR.v", 329, 245); // ce (w, ck)
+typeControlKey(null, null, 'z');
+selectCodeEditor("CSR.v", 283, 45); // ce (w, ck)
+selectCodeEditor("CSR.v", 283, 45, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("CSR.v", 283, 45); // ce (w, ck)
+// Elapsed time: 12 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "ille"); // l (aQ, ck)
+selectCodeEditor("CSR.v", 172, 32); // ce (w, ck)
+selectCodeEditor("CSR.v", 172, 32, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "CSR.v", 'c'); // ce (w, ck)
+selectCodeEditor("CSR.v", 265, 245); // ce (w, ck)
+selectCodeEditor("CSR.v", 265, 245, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "CSR.v", 'v'); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 34 seconds
+selectCodeEditor("CSR.v", 643, 133); // ce (w, ck)
+// Elapsed time: 16 seconds
+selectCodeEditor("CSR.v", 320, 155); // ce (w, ck)
+selectCodeEditor("CSR.v", 236, 150); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("CSR.v", 237, 179); // ce (w, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("CSR.v", 238, 199); // ce (w, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("CSR.v", 240, 218); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("CSR.v", 240, 231); // ce (w, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("CSR.v", 373, 195); // ce (w, ck)
+selectCodeEditor("CSR.v", 373, 195, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 15 seconds
+selectCodeEditor("CSR.v", 201, 145); // ce (w, ck)
+selectCodeEditor("CSR.v", 201, 145, false, false, false, false, true); // ce (w, ck) - Double Click
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "csr_immediate_in"); // l (aQ, ck)
+selectCodeEditor("CSR.v", 200, 149); // ce (w, ck)
+selectCodeEditor("CSR.v", 200, 149, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "CSR.v", 'v'); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 16 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "mcau"); // l (aQ, ck)
+selectCodeEditor("CSR.v", 160, 28); // ce (w, ck)
+selectCodeEditor("CSR.v", 160, 28, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "CSR.v", 'c'); // ce (w, ck)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "mcause_"); // l (aQ, ck)
+selectCodeEditor("CSR.v", 645, 244); // ce (w, ck)
+selectCodeEditor("CSR.v", 645, 244, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "CSR.v", 'v'); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 37 seconds
+selectCodeEditor("CSR.v", 188, 95); // ce (w, ck)
+selectCodeEditor("CSR.v", 157, 163); // ce (w, ck)
+selectCodeEditor("CSR.v", 170, 181); // ce (w, ck)
+selectCodeEditor("CSR.v", 150, 201); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED

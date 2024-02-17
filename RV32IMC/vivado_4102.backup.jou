@@ -1,0 +1,64 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Jan 27 14:21:29 2024
+# Process ID: 4102
+# Current directory: /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC
+# Command line: vivado RV32IMC.xpr
+# Log file: /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/vivado.log
+# Journal file: /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project RV32IMC.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+open_wave_config /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sim_1/imports/muheet-ghani/RV32IMZ-Muheet/memo_tb_behav.wcfg
+source top_tb.tcl
+restart
+run all
+current_wave_config {memo_tb_behav.wcfg}
+add_wave {{/top_tb/RV32I_i/i_branch/operand1_in}} {{/top_tb/RV32I_i/i_branch/operand2_in}} {{/top_tb/RV32I_i/i_branch/branch_en_in}} {{/top_tb/RV32I_i/i_branch/branch_taken_out}} {{/top_tb/RV32I_i/i_branch/function_3_in}} 
+current_wave_config {memo_tb_behav.wcfg}
+add_wave {{/top_tb/RV32I_i/i_ALU/operand1_in}} {{/top_tb/RV32I_i/i_ALU/operand2_in}} {{/top_tb/RV32I_i/i_ALU/alu_result_out}} 
+restart
+run all
+save_wave_config {/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sim_1/imports/muheet-ghani/RV32IMZ-Muheet/memo_tb_behav.wcfg}
+file mkdir /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/new
+close [ open /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/new/RV32_pkg.vh w ]
+add_files /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/new/RV32_pkg.vh
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/single_cycle/rtl/PC.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/PC.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/mux1_2.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/mux2_4.v] -no_script -reset -force -quiet
+remove_files  {/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/single_cycle/rtl/PC.v /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/PC.v /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/mux1_2.v /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sources_1/imports/RV32I-Single-Cycle/Verilog/single_cycle/mux2_4.v}
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+open_wave_config /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sim_1/imports/muheet-ghani/RV32IMZ-Muheet/memo_tb_behav.wcfg
+source top_tb.tcl
+close_sim
+launch_simulation
+open_wave_config /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sim_1/imports/muheet-ghani/RV32IMZ-Muheet/memo_tb_behav.wcfg
+source top_tb.tcl
+close_sim
+launch_simulation
+open_wave_config /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sim_1/imports/muheet-ghani/RV32IMZ-Muheet/memo_tb_behav.wcfg
+source top_tb.tcl
+save_wave_config {/home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sim_1/imports/muheet-ghani/RV32IMZ-Muheet/memo_tb_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/RV32IMC.srcs/sim_1/imports/muheet-ghani/RV32IMZ-Muheet/memo_tb_behav.wcfg
+source top_tb.tcl
+add_files -norecurse /home/muheet-ghani/RV32I-Single-Cycle/RV32IMC/CSR.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
