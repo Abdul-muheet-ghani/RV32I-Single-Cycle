@@ -22,13 +22,13 @@ module CSR #(
     // Interrupts
     input wire external_int_in, //interrupt from external source
     input wire software_int_in, //interrupt from software (inter-processor interrupt)
-    input wire timer_int_in, //interrupt from timer
+    input wire timer_int_in,    //interrupt from timer
 
     /// Exceptions ///
     input wire illegal_instruction_in, //illegal instruction
-    input wire ecall_in, //ecall instruction
-    input wire ebreak_in, //ebreak instruction
-    input wire mret_in, //mret (return from trap) instruction
+    input wire ecall_in,               //ecall instruction
+    input wire ebreak_in,              //ebreak instruction
+    input wire mret_in,                //mret (return from trap) instruction
 
     /// Instruction/Load/Store Misaligned Exception///
     input wire[6:0] opcode_in, //opcode types from type decoder
@@ -90,6 +90,10 @@ module CSR #(
     reg is_interrupt,is_exception;
 
     wire csr_en;
+    reg external_interrut_pending;
+    reg timer_interrut_pending;
+    reg software_interrut_pending;
+    reg is_interrupt,is_exception;
 
     assign csr_en = (opcode_in == `OPCODE_SYSTEM) && (funct3_in != 3'b0);
 
