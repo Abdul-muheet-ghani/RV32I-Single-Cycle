@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun Feb 18 02:56:44 2024
+# Process ID: 11365
+# Current directory: /home/muheet-ghani/RV32I-Single-Cycle/Vivado Project
+# Command line: vivado
+# Log file: /home/muheet-ghani/RV32I-Single-Cycle/Vivado Project/vivado.log
+# Journal file: /home/muheet-ghani/RV32I-Single-Cycle/Vivado Project/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project RV32IM_SoC {/home/muheet-ghani/RV32I-Single-Cycle/Vivado Project/RV32IM_SoC} -part xc7vx485tffg1157-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.2/data/ip'.
+create_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:08 . Memory (MB): peak = 6133.168 ; gain = 75.344 ; free physical = 5528 ; free virtual = 24893
+add_files {/home/muheet-ghani/RV32I-Single-Cycle/sub/src/control_unit.v /home/muheet-ghani/RV32I-Single-Cycle/sub/src/imm.v /home/muheet-ghani/RV32I-Single-Cycle/sub/src/alu.v /home/muheet-ghani/RV32I-Single-Cycle/sub/src/Type_decoder.v /home/muheet-ghani/RV32I-Single-Cycle/sub/src/top.v /home/muheet-ghani/RV32I-Single-Cycle/sub/src/register_file.v /home/muheet-ghani/RV32I-Single-Cycle/sub/src/instruction_memo.v /home/muheet-ghani/RV32I-Single-Cycle/sub/src/branch.v /home/muheet-ghani/RV32I-Single-Cycle/sub/src/data.v /home/muheet-ghani/RV32I-Single-Cycle/sub/src/CSR.v}
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 /home/muheet-ghani/RV32I-Single-Cycle/sub/verif/top.v
+add_files /home/muheet-ghani/RV32I-Single-Cycle/sub/include/RV32_pkg.vh
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Feb 18 03:01:50 2024...
